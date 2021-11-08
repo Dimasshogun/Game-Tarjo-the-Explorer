@@ -1,5 +1,39 @@
 # Game-Tarjo-the-Explorer
 
+# Git Workflow
+
+## Sebelum mulai kerja
+
+Sebelum mulai kerja, atau melanjutkan pekerjaan, pastikan revisi projek di local sudah sesuai dengan di remote. Bandingkan commit HEAD (commit terakhir) antara local dan remote, kalau berbeda lakukan pull di local.
+
+## Branching
+
+Semua perubahan besar, seperti penambahan fitur, refactor besar, dll, selalu dilakukan di branch terpisah, jangan di branch `main`.
+
+Format nama `nama-branch`. Penamaan branch harus sesuai dengan apa yang dikerjakan, misalnya untuk penambahan minigame perhitungan nama branch nya jadi `minigame-perhitungan`.
+
+Setiap merge ke branch `main` harus dilakukan lewat [Pull requests](/pulls).
+
+## Commit
+
+### Apa isinya?
+
+Commit message menjelaskan apa yang dikerjakan sampai commit tersebut.
+
+Format
+
+```
+subject, menjelaskan secara singkat inti yang dikerjakan
+
+body (opsional), menjelaskan lebih detail tentang perubahan dalam commit. detail yang ditambahkan adalah
+- apa saja yang diubah dalam bentuk list, atau
+- kenapa melakukan perubahan itu
+```
+
+### Kapan harus commit?
+
+Lebih baik commit kecil-kecil tapi banyak daripada satu commit yang besar, agar lebih mudah rollback (mereset perubahan) jika terjadi kesalahan dalam pengerjaan dan melacak kesalahan di jika terlewat di commit sebelumnya.
+
 # Daftar isi
 
 - [Penamaan Asset](#penamaan-asset)
