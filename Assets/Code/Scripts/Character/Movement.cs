@@ -8,24 +8,41 @@ namespace Code.Scripts.Character
     {
         private Rigidbody _rigidbody;
         private Transform _modelTransform;
+        private Animator _modelAnimator;
     
         [SerializeField] private float baseSpeed = 10f;
         private float _speed;
         private Transform _mainCameraTransform;
+        private static readonly int XDirection = Animator.StringToHash("xDirection");
+        private static readonly int YDirection = Animator.StringToHash("yDirection");
+        private static readonly int IsWalking = Animator.StringToHash("isWalking");
 
         private void Start()
         {
             _speed = baseSpeed;
             _rigidbody = GetComponent<Rigidbody>();
             _modelTransform = GetComponentInChildren<SpriteRenderer>().transform;
+            _modelAnimator = GetComponentInChildren<Animator>();
             _mainCameraTransform = Camera.main.transform;
             Cursor.lockState = CursorLockMode.Locked;
         }
         private void Update()
         {
-            if (Input.GetAxis("Horizontal") != 0f ||Input.GetAxis("Vertical") != 0f)
+            if (Input.GetAxisRaw("Horizontal") != 0f ||Input.GetAxisRaw("Vertical") != 0f)
             {
-                Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+                var xInput = Input.GetAxis("Horizontal");
+                var yInput = Input.GetAxis("Vertical");
+                Move(xInput, yInput);
+                _modelAnimator.SetFloat(XDirection, xInput);
+                _modelAnimator.SetFloat(YDirection, yInput);
+                _modelAnimator.SetBool(IsWalking, true);
+            }
+            else
+            {
+                if (_modelAnimator.GetBool(IsWalking))
+                {
+                    _modelAnimator.SetBool(IsWalking, false);
+                }
             }
             
             TurnToCamera();

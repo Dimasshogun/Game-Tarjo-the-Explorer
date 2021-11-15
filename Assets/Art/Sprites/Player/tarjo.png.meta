@@ -4,16 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 507710799895061221
-    second: Tarjo_0
+    second: tarjo_front
   - first:
       213: -4992325467713168330
-    second: Tarjo_1
+    second: tarjo_back
   - first:
       213: -7751842420569827355
-    second: Tarjo_2
+    second: tarjo_right
   - first:
       213: 8093954867466772856
-    second: Tarjo_3
+    second: tarjo_left
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,15 +115,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tarjo_0
+      name: tarjo_front
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 132.5
         height: 184
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -136,15 +136,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tarjo_1
+      name: tarjo_back
       rect:
         serializedVersion: 2
         x: 132
         y: 0
         width: 132.5
         height: 184
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,15 +157,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tarjo_2
+      name: tarjo_right
       rect:
         serializedVersion: 2
         x: 264
         y: 0
         width: 132.5
         height: 184
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,15 +178,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tarjo_3
+      name: tarjo_left
       rect:
         serializedVersion: 2
         x: 396
         y: 0
         width: 132.5
         height: 184
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
