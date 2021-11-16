@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: 40992e615346677e7b11e9d141d2ed66
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Ucup-Ucup-0
+  - Ucup-Ucup-1
+  - Ucup-Ucup-2
+  - Ucup-Ucup-3
+  - Ucup-UcupQuest-4
+  - Ucup-UcupQuest-5
+  - Ucup-UcupQuest-6
+  - Ucup-UcupQuest-7
+  - Ucup-UcupQuest-8
+  - Ucup-UcupQuest-9
+  - Ucup-UcupQuest-10
+  - Ucup-UcupQuest-11
+  - Ucup-UcupQuest-12
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: "Error on line 6 at position 26:\nmissing '(' at ','\n<<if
+    questStage(UcupQuest, 0)>>\n                         ^"
+  baseLanguage: {fileID: 7128917941130120860, guid: 40992e615346677e7b11e9d141d2ed66, type: 3}
+  localizations: []

@@ -7,7 +7,6 @@ namespace Code.Scripts.Character
     public class Movement : MonoBehaviour
     {
         private Rigidbody _rigidbody;
-        private Transform _modelTransform;
         private Animator _modelAnimator;
     
         [SerializeField] private float baseSpeed = 10f;
@@ -21,7 +20,6 @@ namespace Code.Scripts.Character
         {
             _speed = baseSpeed;
             _rigidbody = GetComponent<Rigidbody>();
-            _modelTransform = GetComponentInChildren<SpriteRenderer>().transform;
             _modelAnimator = GetComponentInChildren<Animator>();
             _mainCameraTransform = Camera.main.transform;
             Cursor.lockState = CursorLockMode.Locked;
@@ -45,7 +43,6 @@ namespace Code.Scripts.Character
                 }
             }
             
-            TurnToCamera();
         }
         
         private void Move(float x, float y)
@@ -65,13 +62,5 @@ namespace Code.Scripts.Character
             _rigidbody.MovePosition(target);
         }
         
-        private void TurnToCamera()
-        {
-            var cameraPos = _mainCameraTransform.transform.position;
-
-            cameraPos.y = transform.position.y;
-        
-            _modelTransform.LookAt(cameraPos);
-        }
     }
 }
