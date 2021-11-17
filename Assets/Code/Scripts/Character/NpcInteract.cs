@@ -1,5 +1,6 @@
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Yarn.Unity;
 
@@ -13,7 +14,7 @@ namespace Code.Scripts.Character
         public Button interactButton;
         private bool _onDialogue;
         
-        private void Start() 
+        private void Awake() 
         {
             dialogueRunner = FindObjectOfType<DialogueRunner>();
             interactButton.onClick.AddListener(StartDialog);
@@ -21,7 +22,8 @@ namespace Code.Scripts.Character
         
         private void Update()
         {
-            if (Input.GetKeyUp(KeyCode.Space))
+            Keyboard kb = InputSystem.GetDevice<Keyboard>();
+            if (kb.spaceKey.wasPressedThisFrame)
             {
                 StartDialog();
             }
