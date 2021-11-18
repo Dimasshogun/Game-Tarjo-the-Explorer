@@ -24,10 +24,9 @@ namespace Code.Scripts.Character
 
             if (questFile != "")
             {
-                string path = $"Assets/Resources/Quest/{questFile}.json";
-                var reader = new StreamReader(path);
-                string jsonString = reader.ReadToEnd();
-                npcQuest = JsonUtility.FromJson<QuestData>(jsonString);
+
+                var questJson = Resources.Load<TextAsset>($"Quest/{questFile}");
+                npcQuest = JsonUtility.FromJson<QuestData>(questJson.ToString());
                 FindObjectOfType<QuestManager>().quests.Add(npcQuest);
             }
             

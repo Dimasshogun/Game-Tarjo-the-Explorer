@@ -31,7 +31,6 @@ namespace Code.Scripts.Quest
         {
             var questCode = parameters[0];
             var startedQuest = quests.Find(quest => quest.code == questCode).StartQuest();
-            Debug.Log($"Started a quest {startedQuest}");
         }
 
         [YarnCommand("advanceQuestStage")]
@@ -40,7 +39,6 @@ namespace Code.Scripts.Quest
             var questCode = parameters[0];
             var stage = Int32.Parse(parameters[1]);
             var questStage = quests.Find(quest => quest.code == questCode).AdvanceStage(stage);
-            Debug.Log($"{questStage.title}: {questStage.instruction}");
         }
     }
 }
