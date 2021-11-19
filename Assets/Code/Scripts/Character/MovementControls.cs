@@ -25,7 +25,7 @@ namespace Code.Scripts.Character
                     ""type"": ""Value"",
                     ""id"": ""80a9eac8-d46f-4acc-a4f1-52e37b2f85ea"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""processors"": ""NormalizeVector2"",
                     ""interactions"": """"
                 },
                 {
@@ -107,7 +107,7 @@ namespace Code.Scripts.Character
                 {
                     ""name"": """",
                     ""id"": ""87acc537-bae7-4d69-bd89-4aa9b6af8e54"",
-                    ""path"": ""<Touchscreen>/touch0/delta"",
+                    ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Touch"",

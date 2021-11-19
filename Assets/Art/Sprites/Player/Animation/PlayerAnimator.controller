@@ -16,10 +16,10 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: xDirection
-    m_EventTreshold: -1
+    m_EventTreshold: -0.5
   - m_ConditionMode: 4
     m_ConditionEvent: xDirection
-    m_EventTreshold: 1
+    m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -964656083888510850}
   m_Solo: 0
@@ -50,10 +50,10 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: yDirection
-    m_EventTreshold: -1
+    m_EventTreshold: -0.5
   - m_ConditionMode: 4
     m_ConditionEvent: yDirection
-    m_EventTreshold: 1
+    m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2249070642775062546}
   m_Solo: 0
@@ -84,10 +84,10 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: xDirection
-    m_EventTreshold: -1
+    m_EventTreshold: -0.5
   - m_ConditionMode: 4
     m_ConditionEvent: xDirection
-    m_EventTreshold: 1
+    m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6690183678409673705}
   m_Solo: 0
@@ -118,10 +118,10 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: yDirection
-    m_EventTreshold: -1
+    m_EventTreshold: -0.5
   - m_ConditionMode: 4
     m_ConditionEvent: yDirection
-    m_EventTreshold: 1
+    m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2618042041464739685}
   m_Solo: 0
@@ -215,19 +215,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: yDirection
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isWalking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
