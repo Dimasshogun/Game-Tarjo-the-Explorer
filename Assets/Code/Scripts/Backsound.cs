@@ -11,13 +11,12 @@ public class Backsound : MonoBehaviour
             DontDestroyOnLoad(gameObject); //pindah scane nanti audionya tidak kehpus
             GetComponent<AudioSource>().Play(); //play musik di scane pertama
             gameObject.name = "backsound on";
-            PlayerPrefs.SetFloat("volume", 1);
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("volume");
+    public void SoundVolume(float volume){
+        // update volume sesuai parameternya float
+        GetComponent<AudioSource>().volume = volume; 
     }
+    
 }

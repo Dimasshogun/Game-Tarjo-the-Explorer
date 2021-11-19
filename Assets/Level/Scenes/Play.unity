@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 1970121979}
   - component: {fileID: 1970121981}
   - component: {fileID: 1970121982}
+  - component: {fileID: 1970121983}
   m_Layer: 5
   m_Name: back
   m_TagString: Untagged
@@ -493,8 +494,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1970121982}
-          m_TargetAssemblyTypeName: Scale, Assembly-CSharp
+        - m_Target: {fileID: 1970121983}
+          m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
           m_MethodName: scene
           m_Mode: 5
           m_Arguments:
@@ -515,6 +516,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: effeae6c274da8c4da0073877da87c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1970121983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970121977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 554dc00bf4e498642aec7db3036c385c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1985423229
