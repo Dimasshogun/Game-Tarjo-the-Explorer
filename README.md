@@ -1,4 +1,33 @@
-# Game-Tarjo-the-Explorer
+# Game Tarjo the Explorer
+
+# Daftar isi
+
+- [Git Workflow](#git-workflow)
+  * [Sebelum mulai kerja](#sebelum-mulai-kerja)
+  * [Branching](#branching)
+  * [Commit](#commit)
+    + [Apa isinya?](#apa-isinya-)
+    + [Kapan harus commit?](#kapan-harus-commit-)
+- [Penamaan Asset](#penamaan-asset)
+  * [Folder](#folder)
+    + [Folder Debug](#folder-debug)
+  * [Source Code](#source-code)
+  * [Non-Code Assets](#non-code-assets)
+    + [Persistent/Important GameObjects](#persistent-important-gameobjects)
+    + [Debug Objects](#debug-objects)
+- [Struktur File/Folder](#struktur-file-folder)
+  * [Assets](#assets)
+  * [Scripts](#scripts)
+  * [Models](#models)
+- [Workflow](#workflow)
+  * [Models](#models-1)
+  * [Sprite/2D Asset](#sprite-2d-asset)
+  * [File Konfigurasi](#file-konfigurasi)
+  * [Localization](#localization)
+  * [Audio](#audio)
+  * [Script Dialog dan NPC Quest](#script-dialog-dan-npc-quest)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 # Git Workflow
 
@@ -33,28 +62,6 @@ body (opsional), menjelaskan lebih detail tentang perubahan dalam commit. detail
 ### Kapan harus commit?
 
 Lebih baik commit kecil-kecil tapi banyak daripada satu commit yang besar, agar lebih mudah rollback (mereset perubahan) jika terjadi kesalahan dalam pengerjaan dan melacak kesalahan di jika terlewat di commit sebelumnya.
-
-# Daftar isi
-
-- [Penamaan Asset](#penamaan-asset)
-  - [Folder](#folder)
-    - [Folder Debug](#folder-debug)
-  - [Source Code](#source-code)
-  - [Non-Code Assets](#non-code-assets)
-    - [Persistent/Important GameObjects](#persistent-important-gameobjects)
-    - [Debug Objects](#debug-objects)
-- [Directory/File Structure](#directory-file-structure)
-  - [Assets](#assets)
-  - [Scripts](#scripts)
-  - [Models](#models)
-- [Workflow](#workflow)
-  - [Models](#models-1)
-  - [Sprite/2D Asset](#sprite-2d-asset)
-  - [File Konfigurasi](#file-konfigurasi)
-  - [Localization](#localization)
-  - [Audio](#audio)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 # Penamaan Asset
 
@@ -117,21 +124,22 @@ Root
 Assets
 ├── Art
 │   ├── Materials
-│   ├── Models			# 3D Model, FBX and BLEND files
-│   ├── Sprites			# PNG files
-│   └── Textures
+│   ├── Models          # 3D Model, FBX and BLEND files
+│   ├── Sprites         # PNG files
+│   ├── Textures
+│   └── UI              # UI related visual assets
 ├── Audio
 │   ├── Music
 │   └── Sound
 ├── Code
-│   └── Scripts			# C# scripts
-├── Docs						# Wiki, Concept art, Marketing material
-├── Level						# Anything related to game design in Unity
+│   └── Scripts         # C# scripts
+├── Docs                # Wiki, Concept art, Marketing material
+├── Level               # Anything related to game design in Unity
 │   ├── Prefabs
 │   └── Scenes
 │   └── UI
-├── Resources       # Configuration files, localization text and other user files.
-└── ThirdParty			# Assets from third party sources, i.e. Asset store
+├── Resources           # Configuration files, localization text and other user files.
+└── ThirdParty          # Assets from third party sources, i.e. Asset store
 ```
 
 ## Scripts
@@ -170,7 +178,7 @@ File extension: `FBX`
 
 Meskipun Unity mendukung file Blender secara default, lebih baik memisahkan file yang sedang dikerjakan dan file yang sudah diekspor. Ini juga perlu dilakukan saat menggunakan software lain, misalnya Substance untuk texturing.
 
-Export Settings: `Y up`, `-Z forward`, `uniform scale`.
+Export Settings: `All Local`, `Y up`, `-Z forward`, `Apply Transform`.
 
 ## Sprite/2D Asset
 
@@ -193,6 +201,10 @@ Banyak digunakan oleh localization software, lebih mudah untuk mengedit string m
 File extension: `WAV` while mixing, `OGG` in game.
 
 Preload small sound clips to memory, load on the fly for longer music and less frequent ambient noise files.
+
+## Script Dialog dan NPC Quest
+
+Panduan penulisan Script dialog dan NPC Quest dapat diakses [disini](Assets/Docs/howTo_dialogue.md).
 
 # Be Consistent
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 40992e615346677e7b11e9d141d2ed66
+guid: 110ac7da233c4925395c35fa313d790e
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -25,7 +25,6 @@ ScriptedImporter:
   - Ucup-UcupQuest-12
   compilationStatus: 1
   isSuccesfullyCompiled: 1
-  compilationErrorMessage: "Error on line 6 at position 26:\nmissing '(' at ','\n<<if
-    questStage(UcupQuest, 0)>>\n                         ^"
-  baseLanguage: {fileID: 7128917941130120860, guid: 40992e615346677e7b11e9d141d2ed66, type: 3}
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
   localizations: []
