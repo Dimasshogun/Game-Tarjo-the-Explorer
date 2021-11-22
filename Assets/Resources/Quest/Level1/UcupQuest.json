@@ -1,0 +1,26 @@
+{
+  "code": "UcupQuest",
+  "name": "Tolong Ucup",
+  "stages": [
+    {
+      "title": "Kenapa ucup menangis?",
+      "instruction": "Tanyakan kenapa ucup menangis",
+      "status": "Active"
+    },
+    {
+      "title": "Perbaiki Uang Ucup",
+      "instruction": "Perbaiki Uang Ucup",
+      "status": "Active"
+    },
+    {
+      "title": "Selesai",
+      "instruction": "Kamu telah memperbaiki uang Ucup",
+      "status": "Success"
+    },
+    {
+      "title": "Gagal",
+      "instruction": "Kamu gagal memperbaiki uang Ucup",
+      "status": "Fail"
+    }
+  ]
+}

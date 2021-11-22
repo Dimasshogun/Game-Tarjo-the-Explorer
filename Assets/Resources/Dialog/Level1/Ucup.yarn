@@ -1,0 +1,35 @@
+title: Ucup
+tags: 
+colorID: 8
+position: 217,-87
+---
+<<if questStage("UcupQuest", 0)>>
+    Ucup : Uuhuhuhuuu
+    <<startQuest QuestManager UcupQuest>>
+    -> Ucup kenapa menangis?
+        [[UcupQuest]]
+<<endif>>
+-> dadah
+    Ucup : Uuhuhuhuuu
+===
+title: UcupQuest
+tags: 
+colorID: 0
+position: 481,-99
+---
+<<if questStage("UcupQuest", 0)>>
+    Ucup : huhuuu aku disuruh ayah membeli sarapan, tetapi barusan aku memainkan uangku dan tidak sengaja uangku menjadi sobek. Ayah pasti akan memarahiku.
+    Tarjo : hemm, jangan menangis, Ucup. boleh aku melihat uangmu?”
+    Ucup : Ini uangku, 20.000 untuk 2 nasi bungkus” -ucup menunjukkan uangnya yang terbelah menjadi 2-
+    <<advanceQuestStage QuestManager UcupQuest 1>>
+<<endif>>
+
+<<if questStage("UcupQuest", 1)>>
+-> Bagaimana cara aku menolong ucup ya?
+    Tarjo : Aku ingin mengganti dengan uang saku ku, tapi uangku hanya 8000, Ucup. 
+    kutu ajaib bergerak ke telinga Tarjo, berbisik “Tarjo, apa kamu punya lem kertas?”
+    Tarjo : Ahaa. Benar sekali, Tarjo. Lem kertas!! Ucup, jangan menangis lagi. Aku punya solusinya.
+    (Membuka tas. User diminta untuk mencari lem kertas.
+    Tarjo : Hemm, yang manakah lem kertas?
+<<endif>>
+===
