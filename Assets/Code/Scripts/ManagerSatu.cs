@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class ManagerSatu : MonoBehaviour
 {
-    public GameObject seribu, seratusribu, duapuluhribu, limaribu,seribuhitam, seratusribuhitam, duapuluhribuhitam, limaribuhitam;
+    public GameObject seribu, seratusribu, duapuluhribu, limaribu,seribuhitam, seratusribuhitam, duapuluhribuhitam, limaribuhitam, finish;
 
     Vector2 seribuInitialPos, seratusribuInitialPos, duapuluhribuInitialPos, limaribuInitialPos;
 
@@ -22,6 +24,7 @@ public class ManagerSatu : MonoBehaviour
         limaribuInitialPos = limaribu.transform.position;
     }
 
+    
     // Update is called once per frame
     public void Dragseribu()
     {
@@ -114,7 +117,7 @@ public class ManagerSatu : MonoBehaviour
     {
         if(limaribuCorrect)
         {
-            Debug.Log("You win!");
+            finish.gameObject.SetActive(true);
         }
     }
     // kucing, seratusribu, duapuluhribu, limaribu, kambing
