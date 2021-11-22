@@ -11,7 +11,7 @@ namespace Code.Scripts.Character
         private void Start()
         {
             _mainCameraTransform = Camera.main.transform;
-            _modelTransform = GetComponentInChildren<SpriteRenderer>().transform;
+            _modelTransform = GetComponentsInChildren<Transform>()[1];
         }
 
         private void Update()
@@ -23,9 +23,10 @@ namespace Code.Scripts.Character
         {
             var cameraPos = _mainCameraTransform.transform.position;
 
-            cameraPos.y = transform.position.y;
+            var currentPos = transform.position;
+            cameraPos.y = currentPos.y;
         
-            _modelTransform.LookAt(cameraPos);
+            _modelTransform.LookAt(2 * currentPos - cameraPos);
         }
     }
 }
