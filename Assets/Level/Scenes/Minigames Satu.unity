@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 357046410}
   - component: {fileID: 357046409}
   m_Layer: 5
-  m_Name: Seratus Hitam
+  m_Name: Hitam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -925,7 +925,7 @@ GameObject:
   - component: {fileID: 1508260175}
   - component: {fileID: 1508260174}
   m_Layer: 5
-  m_Name: Seribu Hitam
+  m_Name: Hitam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1694,7 +1694,7 @@ GameObject:
   - component: {fileID: 1900693774}
   - component: {fileID: 1900693773}
   m_Layer: 5
-  m_Name: Dua Puluh Ribu Hitam
+  m_Name: Hitam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
