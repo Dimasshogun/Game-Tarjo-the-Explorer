@@ -34,6 +34,7 @@ namespace Code.Scripts.Minigame
 
         private void Start()
         {
+            // Set endScreen dengan objek bernama EndScreen kalau belum diset dari Inspector
             if (endScreen == null)
             {
                 endScreen = GameObject.Find("EndScreen");

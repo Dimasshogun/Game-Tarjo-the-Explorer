@@ -449,6 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e025e0c5d7aa40d3b124b598b7ba0f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetDrop: {fileID: 187847298}
   speed: 0
   answerValue: 20000
 --- !u!1 &357961163
@@ -693,6 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e025e0c5d7aa40d3b124b598b7ba0f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetDrop: {fileID: 187847298}
   speed: 0
   answerValue: 5000
 --- !u!1 &952808468
@@ -1298,6 +1300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e025e0c5d7aa40d3b124b598b7ba0f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetDrop: {fileID: 187847298}
   speed: 0
   answerValue: 100000
 --- !u!1 &1884326417
@@ -1525,6 +1528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e025e0c5d7aa40d3b124b598b7ba0f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetDrop: {fileID: 187847298}
   speed: 0
   answerValue: 1000
 --- !u!1 &2011982128
