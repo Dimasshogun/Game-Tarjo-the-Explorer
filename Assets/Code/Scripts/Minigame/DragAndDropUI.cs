@@ -49,6 +49,7 @@ namespace Code.Scripts.Minigame
             else
             {
                 _objectRectTransform.position = _initialPosition;
+                MinigameManager.Instance.PlayIncorrect();
             }
         }
     }
