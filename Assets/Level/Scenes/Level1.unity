@@ -2312,6 +2312,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7574269861243802689, guid: 315fb1120e5008e7eafccb5a2b08daf6, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 963194227}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 315fb1120e5008e7eafccb5a2b08daf6, type: 3}
 --- !u!1001 &5726233151584882945
@@ -2684,6 +2688,14 @@ PrefabInstance:
       propertyPath: dialogueRunner
       value: 
       objectReference: {fileID: 1843208576}
+    - target: {fileID: 7615915418573688684, guid: 28e5ed6a570268056ab75130ba5b49da, type: 3}
+      propertyPath: questFiles.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615915418573688684, guid: 28e5ed6a570268056ab75130ba5b49da, type: 3}
+      propertyPath: questFiles.Array.data[0]
+      value: Level1/UcupQuest
+      objectReference: {fileID: 0}
     - target: {fileID: 7615915418573688685, guid: 28e5ed6a570268056ab75130ba5b49da, type: 3}
       propertyPath: m_RootOrder
       value: 5

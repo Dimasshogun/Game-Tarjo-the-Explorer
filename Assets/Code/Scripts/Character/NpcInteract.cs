@@ -1,4 +1,5 @@
 using Cinemachine;
+using Code.Scripts.NPC;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -8,7 +9,7 @@ namespace Code.Scripts.Character
 {
     public class NpcInteract : MonoBehaviour
     {
-        private NpcController _targetNpc;
+        private NpcDialogue _targetNpc;
         
         public DialogueRunner dialogueRunner;
         public Button interactButton;
@@ -51,7 +52,7 @@ namespace Code.Scripts.Character
 
         public void SetTargetNpc(GameObject npc)
         {
-            _targetNpc = npc.GetComponent<NpcController>();
+            _targetNpc = npc.GetComponent<NpcDialogue>();
         }
 
         public void ToggleOnDialogue(bool onDialogue)
