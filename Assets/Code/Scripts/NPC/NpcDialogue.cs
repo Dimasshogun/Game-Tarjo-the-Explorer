@@ -12,9 +12,16 @@ namespace Code.Scripts.NPC
         
         public YarnProgram dialogueScript;
 
-        private void Start () {
-            if (dialogueScript != null) {
-                DialogueRunner dialogueRunner = FindObjectOfType<DialogueRunner>();
+        private void Start ()
+        {
+            if (dialogueScript == null)
+            {
+                return;
+            }
+
+            DialogueRunner dialogueRunner = FindObjectOfType<DialogueRunner>();
+            if ( !dialogueRunner.NodeExists(entryNode))
+            {
                 dialogueRunner.Add(dialogueScript);                
             }
         }
