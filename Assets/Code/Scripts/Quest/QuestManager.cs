@@ -37,9 +37,7 @@ namespace Code.Scripts.Quest
         {
             foreach (var questFile in questFiles)
             {
-                Debug.Log($"Quest/{questFile}");
                 var questJson = Resources.Load<TextAsset>($"Quest/{questFile}");
-                Debug.Log(questJson);
                 if (questJson != null)
                 {
                     var npcQuest = JsonUtility.FromJson<QuestData>(questJson.ToString());
@@ -75,6 +73,7 @@ namespace Code.Scripts.Quest
             quest.status = quest.stages[quest.currentStage].status;
             UpdateNpc(quest.stages[quest.currentStage]);
             
+            // should change with quest notification
             Debug.Log($"Started {quest.name}");
         }
 
@@ -92,6 +91,12 @@ namespace Code.Scripts.Quest
             Debug.Log($"{quest.name}: {quest.stages[quest.currentStage]}");
         }
 
+        public QuestStage GetQuestStage(string questCode)
+        {
+            var quest = quests.Find(quest => quest.code == questCode);
+            return quest.stages[quest.currentStage];
+        }
+        
         public string GetQuestNpc(string questCode)
         {
             var quest = quests.Find(quest => quest.code == questCode);

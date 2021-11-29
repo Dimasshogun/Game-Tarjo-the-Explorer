@@ -21,7 +21,6 @@ namespace Code.Scripts.NPC
                 return;
             }
 
-            Debug.Log("update marker");
             switch (stage.status)
             {
                 case QuestStatus.Inactive:

@@ -25,7 +25,6 @@ namespace Code.Scripts.Character
 
         private CinemachineFreeLook _playerCamera;
         private CinemachineVirtualCamera _npcCamera;
-        private int _originalPriority;
 
         private void Start()
         {
@@ -35,13 +34,12 @@ namespace Code.Scripts.Character
         public void SwitchToNpcCam(CinemachineVirtualCamera npcCamera)
         {
             _npcCamera = npcCamera;
-            _originalPriority = npcCamera.Priority;
             npcCamera.Priority = _playerCamera.Priority + 1;
         }
 
         public void SwitchToPlayerCam()
         {
-            _npcCamera.Priority = _originalPriority;
+            _npcCamera.Priority = _playerCamera.Priority - 1;
         }
     }
 }

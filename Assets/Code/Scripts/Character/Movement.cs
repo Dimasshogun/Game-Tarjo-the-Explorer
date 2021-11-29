@@ -7,6 +7,7 @@ namespace Code.Scripts.Character
 {
     public class Movement : MonoBehaviour
     {
+        [SerializeField] private GameObject gameplayUI;
         private Rigidbody _rigidbody;
         private Animator _modelAnimator;
     
@@ -26,11 +27,16 @@ namespace Code.Scripts.Character
 
         private void Start()
         {
-            _speed = baseSpeed;
             _rigidbody = GetComponent<Rigidbody>();
             _modelAnimator = GetComponentInChildren<Animator>();
             _mainCameraTransform = Camera.main.transform;
             Cursor.lockState = CursorLockMode.Locked;
+            
+            if (gameplayUI == null)
+            {
+                GameObject.Find("GameplayUI");
+            }
+            _speed = baseSpeed;
         }
         private void FixedUpdate()
         {
@@ -72,11 +78,13 @@ namespace Code.Scripts.Character
         private void OnEnable()
         {
             _controls.Player.Enable();
+            gameplayUI.SetActive(true);
         }
 
         private void OnDisable()
         {
             _controls.Player.Disable();
+            gameplayUI.SetActive(false);
         }
     }
 }

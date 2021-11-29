@@ -20,10 +20,7 @@ namespace Code.Scripts.NPC
             }
 
             DialogueRunner dialogueRunner = FindObjectOfType<DialogueRunner>();
-            if ( !dialogueRunner.NodeExists(entryNode))
-            {
-                dialogueRunner.Add(dialogueScript);                
-            }
+            dialogueRunner.Add(dialogueScript);                
         }
     }
 }
