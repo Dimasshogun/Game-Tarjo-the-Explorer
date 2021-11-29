@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3441730732294277911}
   - component: {fileID: 3441730732294277908}
   m_Layer: 0
-  m_Name: something_character_alt
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3441730732294792800}
-  m_LocalRotation: {x: 0.0000000010691602, y: 0.9980676, z: -0.062137425, w: 0.000000017173136}
+  m_LocalRotation: {x: -0.06082302, y: -0.09236863, z: 0.005652908, w: -0.99384946}
   m_LocalPosition: {x: 0, y: 2, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
