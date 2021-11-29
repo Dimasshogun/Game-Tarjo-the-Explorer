@@ -73,8 +73,7 @@ namespace Code.Scripts.Quest
             quest.status = quest.stages[quest.currentStage].status;
             UpdateNpc(quest.stages[quest.currentStage]);
             
-            // should change with quest notification
-            Debug.Log($"Started {quest.name}");
+            QuestNotification.Instance.ShowNotification(quest.stages[quest.currentStage]);
         }
 
         [YarnCommand("advanceQuestStage")]
@@ -88,7 +87,7 @@ namespace Code.Scripts.Quest
             quest.status = quest.stages[quest.currentStage].status;
             UpdateNpc(quest.stages[quest.currentStage]);
             
-            Debug.Log($"{quest.name}: {quest.stages[quest.currentStage]}");
+            QuestNotification.Instance.ShowNotification(quest.stages[quest.currentStage]);
         }
 
         public QuestStage GetQuestStage(string questCode)
