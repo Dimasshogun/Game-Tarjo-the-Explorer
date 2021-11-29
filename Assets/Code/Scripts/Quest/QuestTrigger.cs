@@ -40,6 +40,7 @@ namespace Code.Scripts.Quest
             _triggered = true;
             gameObject.SetActive(false);
             playerMovement.enabled = true;
+            QuestManager.Instance.RunNpcUpdate();
         }
     }
 }

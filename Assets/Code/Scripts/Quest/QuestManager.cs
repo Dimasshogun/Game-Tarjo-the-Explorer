@@ -30,7 +30,9 @@ namespace Code.Scripts.Quest
         [SerializeField] private DialogueRunner dialogueRunner;
         [SerializeField] private string[] questFiles;
         public List<QuestData> quests = new List<QuestData>();
-        
+
+        private Queue<QuestStage> _updateNpcQueue = new Queue<QuestStage>();
+
         public UnityAction<QuestStage> UpdateNpc = delegate {  };
 
         private void Start()
@@ -71,7 +73,7 @@ namespace Code.Scripts.Quest
             
             var quest = quests.Find(quest => quest.code == questCode);
             quest.status = quest.stages[quest.currentStage].status;
-            UpdateNpc(quest.stages[quest.currentStage]);
+            _updateNpcQueue.Enqueue(quest.stages[quest.currentStage]);
             
             QuestNotification.Instance.ShowNotification(quest.stages[quest.currentStage]);
         }
@@ -85,7 +87,7 @@ namespace Code.Scripts.Quest
             var quest = quests.Find(quest => quest.code == questCode);
             quest.currentStage = stage;
             quest.status = quest.stages[quest.currentStage].status;
-            UpdateNpc(quest.stages[quest.currentStage]);
+            _updateNpcQueue.Enqueue(quest.stages[quest.currentStage]);
             
             QuestNotification.Instance.ShowNotification(quest.stages[quest.currentStage]);
         }
@@ -100,6 +102,15 @@ namespace Code.Scripts.Quest
         {
             var quest = quests.Find(quest => quest.code == questCode);
             return quest.stages[quest.currentStage].relatedNpc;
+        }
+
+        public void RunNpcUpdate()
+        {
+            while (_updateNpcQueue.Count > 0)
+            {
+                var updatedStage = _updateNpcQueue.Dequeue();
+                UpdateNpc(updatedStage);
+            }
         }
     }
 }
