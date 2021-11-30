@@ -63,12 +63,16 @@ Command yang ada di project ini (akan terus diupdate sepanjang proses developmen
   ```
   <<advanceQuestStage QuestManager QuestCode stage>>
   ```
+- startMinigame, untuk memulai minigame. Command ini menunda dialogue sampai minigame diselesaikan
+  ```
+  <<startMinigame NamaPrefabMinigame>>
+  ```
 
 Guide lebih detail tentang penggunaan dan cara membuat custom command bisa dilihat di halaman [Working With Commands](https://yarnspinner.dev/docs/unity/working-with-commands/) di dokumentasi yarn spinner.
 
 ### Function
 
-Seperti namanya, Function didefinisikan untuk bisa digunakan didalam yarn script. Biasanya function digunakan dengan [Expression dan if statement](https://yarnspinner.dev/docs/writing/expressions-and-variables/#expressions-and-if-statements
+Seperti namanya, Function didefinisikan untuk bisa digunakan didalam yarn script. Biasanya function digunakan dengan [Expression dan if statement](https://yarnspinner.dev/docs/writing/expressions-and-variables/#expressions-and-if-statements)
 
 Function yang ada di project ini (akan terus diopdate sepanjang proses development)
 
@@ -79,7 +83,7 @@ Function yang ada di project ini (akan terus diopdate sepanjang proses developme
 
 Cara membuat function bisa dilihat dokumentasi untuk [DialogueRunner.AddFunction](https://yarnspinner.dev/api/yarn.unity/dialoguerunner/yarn.unity.dialoguerunner.addfunctionsystem.stringsystem.int32yarn.returningfunction/)
 
-Referensi penulisan Yarn script di project ini bisa lihat file [Ucup.yarn](../Dialogue/Level1/Ucup.yarn)
+Referensi penulisan Yarn script di project ini bisa lihat file [Ucup.yarn](../Resources/Dialog/Level1/Ucup.yarn)
 
 > Perhatian: Saat penulisan di Yarn Editor agar Yarn script nya bisa dicoba dijalankan, jangan dulu menggunakan Command dan Function yang ada di project. Sebagai alternatif bisa gunakan fitur variables yang diberikan oleh Yarn Spinner sebagai placeholder.
 
@@ -92,29 +96,56 @@ Suatu NPC bisa memiliki quest yang bisa diberikan ke player. Spesifikasi dari qu
 
 Untuk membuat sebuah quest, buat satu file `Quest.json` berisi definisi berikut
 
-> `code` `(string)`: Nama yang dipakai untuk merujuk quest dalam kode
+> `code` `string`: Nama yang dipakai untuk merujuk quest dalam kode
 > 
-> `name` `(string)`: Judul quest yang ditampilkan ke player
+> `name` `string`: Judul quest yang ditampilkan ke player
 > 
-> `stages` `(Array)`: Berisi stage/tahap progress quest yang bisa dilalui pemain.
+> `startingType` `enum QuestStartingType`: Tipe pemicu mulai quest
+> 
+> `stages` `QuestStage[]`: Berisi stage/tahap progress quest yang bisa dilalui pemain.
 
 Satu stage yang ada didalam array `stages`
 
 > `title` `string`: Judul dari stage yang ditampilkan ke player setiap masuk ke stage baru
 >
 > `instruction` `string`: Instruksi tambahan untuk membantu player menyelesaikan stage
+>
+> `relatedNpc` `string`: NPC yang harus ditemui player untuk memulai atau menyelesaikan quest stage
 > 
-> `status` `(Active|Success|Fail)`: Status yang menandakan implikasi stage terhadap quest
+> `requirements` `string[]`: Hal-hal yang harus dimiliki player untuk menyelesaikan quest stage (fungsinya belum diimplementasi)
+>
+> `status` `enum QuestStatus`: Status yang menandakan implikasi stage terhadap quest
+
+Tipe-tipe dalam `enum QuestStatus` adalah
+
+> `0` `Inactive`: Menandakan quest tidak aktif atau belum dimulai
+>
+> `1` `TaskPending`: Menandakan quest aktif dan menunggu player menyelesaikan instruksi
+>
+> `2` `TaskDone`: Menandakan player telah selesai menyelesaikan instruksi dan menunggu player melapor ke NPC
+>
+> `3` `Success`: Menandakan quest selesai dengan status sukses
+>
+> `4` `Fail`: Menandakan quest selesai dengan status gagal
+
+Tipe-tipe dalam `enum QuestStartingType` adalah
+
+> `0` `Instant`: Quest dimulai langsung saat level dimulai
+>
+> `1` `Triggered`: Quest dimulai dengan trigger yang dilewati player saat bermain
+ 
+didalam asset quest data `status` dan `startingType` ditulis dengan value angka nya
 
 Tata cara penulisan file `.json` bisa lihat halaman [TutorialsPoint | JSON - Quick Guide](https://www.tutorialspoint.com/json/json_quick_guide.htm)
 
-Referensi penulisan Quest Data bisa lihat file [UcupQuest.json](../Quest/Level1/UcupQuest.json)
+Referensi penulisan Quest Data bisa lihat file [UcupQuest.json](../Resources/Quest/Level1/UcupQuest.json)
 
-## Menyatukan semuanya dalam satu NPC
+## Menyatukan semuanya dalam satu scene
 
-Untuk menyatukan Yarn script dan Quest data dalam satu NPC
+Untuk menyatukan dialogue dan quest dalam satu scene ada dua hal yang harus dilakukan,
 
-- Ambil prefab NPC di folder [`Level/Prefabs`](/Assets/Level/Prefabs) masukkan kedalam scene, terserah secara langsung atau ke Hierarchy.
+Pertama, setup NPC,
+- Ambil prefab `NPC` di folder [`Level/Prefabs`](../Level/Prefabs) masukkan kedalam scene, terserah secara langsung atau ke Hierarchy.
 - Buka GameObject NPC di Inspector
 
   ![NPC Inspector](Images/howTo_dialogue_NPCInspector.png)
@@ -122,7 +153,20 @@ Untuk menyatukan Yarn script dan Quest data dalam satu NPC
   
   Drop file dialog `.yarn` di `Dialogue Script`
 
-  Isi `Entry Node` dengan nama node yang ingin dieksekusi ketika memulai percakapan dengan NPC
+  Isi `Entry Node` dengan nama node yang ingin dieksekusi ketika memulai percakapan dengan NPC, biasanya sama dengan nama NPC
 
-  Isi `Quest File` dengan path dan nama file quest data
-- Setelah semua lengkap, ketika dijalankan game nya dan kita menghampiri NPC tersebut maka player bisa berinteraksi dengan nya, ditandai dengan munculnya tombol Interact.
+  Didalam prefab `NPC` sudah ada script `NpcQuest`, script ini digunakan untuk manage quest marker yang tampak diatas NPC. Jika NPC tidak punya quest script ini bisa diremove.
+
+Kedua, menambahkan quest data ke `QuestManager`,
+- Di Hierarchy, cari gameobject `QuestManager`, di dalam prefab `Quest`, gameobject ini bertanggungjawab sebagai manager tersentralisasi dari semua quest yang ada di satu level.
+
+  ![Quest Manager Inspector](Images/howTo_dialogue_QuestManagerInspector.png)
+- didalam array `Quest Files` tambahkan path ke file quest
+ 
+Setelah semua lengkap, ketika dijalankan game nya dan kita menghampiri NPC tersebut maka player bisa berinteraksi dengan nya, ditandai dengan munculnya tombol Interact.
+
+Berikut contoh gameobject `NPC` dan `QuestManager` yang sudah terisi
+
+![NPC Inspector](Images/howTo_dialogue_NPCInspector_filled.png)
+
+![Quest Manager Inspector](Images/howTo_dialogue_QuestManagerInspector_filled.png)
