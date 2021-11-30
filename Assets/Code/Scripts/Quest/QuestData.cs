@@ -8,16 +8,25 @@ namespace Code.Scripts.Quest
     {
         public string title;
         public string instruction;
+        public string relatedNpc;
+        public string[] requirements;
         public QuestStatus status;
     }
 
     [Serializable]
     public enum QuestStatus
     {
-        Pending,
-        Active,
+        Inactive,
+        TaskPending,
+        TaskDone,
         Success,
         Fail
+    }
+
+    public enum QuestStartingType
+    {
+        Instant,
+        Triggered
     }
     
     [Serializable]
@@ -25,21 +34,9 @@ namespace Code.Scripts.Quest
     {
         public string code;
         public string name;
-        public QuestStatus status = QuestStatus.Pending;
+        public QuestStartingType startingType;
+        public QuestStatus status = QuestStatus.Inactive;
         public int currentStage = 0;
         public List<QuestStage> stages;
-
-        public string StartQuest()
-        {
-            status = QuestStatus.Active;
-            return name;
-        }
-
-        public QuestStage AdvanceStage(int stageNumber)
-        {
-            currentStage = stageNumber;
-            status = stages[currentStage].status;
-            return stages[currentStage];
-        }
     }
 }

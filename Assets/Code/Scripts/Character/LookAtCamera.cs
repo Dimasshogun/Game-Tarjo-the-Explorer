@@ -5,13 +5,11 @@ namespace Code.Scripts.Character
 {
     public class LookAtCamera : MonoBehaviour
     {
-        private Transform _modelTransform;
         private Transform _mainCameraTransform;
 
         private void Start()
         {
             _mainCameraTransform = Camera.main.transform;
-            _modelTransform = GetComponentsInChildren<Transform>()[1];
         }
 
         private void Update()
@@ -26,7 +24,7 @@ namespace Code.Scripts.Character
             var currentPos = transform.position;
             cameraPos.y = currentPos.y;
         
-            _modelTransform.LookAt(2 * currentPos - cameraPos);
+            transform.LookAt(2 * currentPos - cameraPos);
         }
     }
 }
