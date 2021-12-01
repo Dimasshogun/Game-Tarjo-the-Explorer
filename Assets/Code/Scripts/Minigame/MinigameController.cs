@@ -1,10 +1,9 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
 
-namespace Code.Scripts
+namespace Code.Scripts.Minigame
 {
     public class MinigameController : MonoBehaviour
     {

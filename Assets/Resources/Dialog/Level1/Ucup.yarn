@@ -5,7 +5,6 @@ position: 217,-87
 ---
 <<if questStage("UcupQuest", 0)>>
     Ucup : Uuhuhuhuuu
-    <<startQuest QuestManager UcupQuest>>
     -> Ucup kenapa menangis?
         [[UcupQuest]]
 <<endif>>
@@ -33,7 +32,7 @@ position: 481,-99
     Tarjo : Ahaa. Benar sekali, Tarjo. Lem kertas!! Ucup, jangan menangis lagi. Aku punya solusinya.
     (Membuka tas. User diminta untuk mencari lem kertas.
     Tarjo : Hemm, yang manakah lem kertas?
-    <<startMinigame MinigameTemp>>
+    <<startMinigame Minigames5>>
     <<advanceQuestStage QuestManager UcupQuest 2>>
     Ucup: Terimakasih telah membantu aku Tarjo :D
 <<endif>>

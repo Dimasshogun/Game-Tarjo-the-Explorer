@@ -16,7 +16,7 @@ namespace Code.Scripts.Minigame
                     _instance = FindObjectOfType<MinigameManager>();
                     if (_instance == null)
                     {
-                        Debug.LogError("MinigameManager Not Found!");
+                        Debug.LogError("Minigame Manager Not Found!");
                     }
                 }
 
@@ -32,6 +32,13 @@ namespace Code.Scripts.Minigame
 
         public int correctAnswer;
 
+        public bool completed;
+        
+        public void EndMinigame()
+        {
+            completed = true;
+        }
+        
         private void Start()
         {
             // Set endScreen dengan objek bernama EndScreen kalau belum diset dari Inspector
