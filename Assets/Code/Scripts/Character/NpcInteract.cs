@@ -64,8 +64,8 @@ namespace Code.Scripts.Character
             if (onDialogue)
             {
                 Cursor.lockState = CursorLockMode.None;
-                var targetNpcCam = _targetNpc.gameObject.GetComponentInChildren<CinemachineVirtualCamera>();
-                CameraManager.Instance.SwitchToNpcCam(targetNpcCam);
+                var targetNpcCam = _targetNpc.gameObject.GetComponentInChildren<CameraInstance>();
+                CameraManager.Instance.SwitchVirtualCam(targetNpcCam);
             }
             else
             {

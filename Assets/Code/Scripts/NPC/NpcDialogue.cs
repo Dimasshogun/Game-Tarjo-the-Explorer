@@ -9,6 +9,7 @@ namespace Code.Scripts.NPC
     {
         public string characterName = "";
         public string entryNode = "";
+        public bool instantExec = false;
         
         public YarnProgram dialogueScript;
 
@@ -20,7 +21,11 @@ namespace Code.Scripts.NPC
             }
 
             DialogueRunner dialogueRunner = FindObjectOfType<DialogueRunner>();
-            dialogueRunner.Add(dialogueScript);                
+            dialogueRunner.Add(dialogueScript);
+            if (instantExec)
+            {
+                dialogueRunner.StartDialogue(entryNode);
+            }
         }
     }
 }

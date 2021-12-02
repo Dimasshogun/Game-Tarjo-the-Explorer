@@ -1,8 +1,9 @@
-using System;
+using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using Yarn.Unity;
 
-namespace Code.Scripts.Character
+namespace Code.Scripts
 {
     public class CameraManager : MonoBehaviour
     {
@@ -24,22 +25,29 @@ namespace Code.Scripts.Character
         }
 
         private CinemachineFreeLook _playerCamera;
-        private CinemachineVirtualCamera _npcCamera;
+        private CameraInstance _currentVirtualCam;
+
+        public List<CameraInstance> cameraInstances = new List<CameraInstance>();
 
         private void Start()
         {
             _playerCamera = GameObject.FindWithTag("Player").GetComponentInChildren<CinemachineFreeLook>();
+            cameraInstances.AddRange(FindObjectsOfType<CameraInstance>());
         }
 
-        public void SwitchToNpcCam(CinemachineVirtualCamera npcCamera)
+        public void SwitchVirtualCam(CameraInstance npcCamera)
         {
-            _npcCamera = npcCamera;
-            npcCamera.Priority = _playerCamera.Priority + 1;
+            if (_currentVirtualCam != null)
+            {
+                _currentVirtualCam.virtualCam.Priority = _currentVirtualCam.originalPriority;
+            }
+            npcCamera.virtualCam.Priority = _playerCamera.Priority + 1;
+            _currentVirtualCam = npcCamera;
         }
 
         public void SwitchToPlayerCam()
         {
-            _npcCamera.Priority = _playerCamera.Priority - 1;
+            _currentVirtualCam.virtualCam.Priority = _currentVirtualCam.originalPriority;
         }
     }
 }

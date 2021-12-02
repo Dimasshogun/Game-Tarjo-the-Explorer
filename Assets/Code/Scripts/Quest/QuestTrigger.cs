@@ -23,12 +23,12 @@ namespace Code.Scripts.Quest
         private IEnumerator StartQuestTrigger()
         {
             var questStage = QuestManager.Instance.GetQuestStage(questCode);
-            var npcCamera = GameObject.Find(questStage.relatedNpc).GetComponentInChildren<CinemachineVirtualCamera>();
+            var npcCamera = GameObject.Find(questStage.relatedNpc).GetComponentInChildren<CameraInstance>();
             var playerMovement = GameObject.FindWithTag("Player").GetComponent<Movement>();
 
             playerMovement.enabled = false;
             yield return new WaitForSeconds(1.0f);
-            CameraManager.Instance.SwitchToNpcCam(npcCamera);
+            CameraManager.Instance.SwitchVirtualCam(npcCamera);
             
             yield return new WaitForSeconds(2.0f);
             QuestManager.Instance.StartQuest(new []{questCode});

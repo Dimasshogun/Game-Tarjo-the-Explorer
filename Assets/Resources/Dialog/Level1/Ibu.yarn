@@ -1,0 +1,24 @@
+title: IbuMinigame
+tags: 
+colorID: 0
+position: -68,-603
+---
+<<switchCamera Cutscene1Cam1>>
+Di pagi yang begitu cerah, Tarjo akan segera pergi ke sekolah. 
+<<moveCharacter Tarjo Cutscene1Target1>>
+Tarjo: Bu tarjo pergi kesekolah dulu yah,
+
+Ibu: iya ini uang sakunya ya jo (ibu memberi uang 3k)
+
+Tarjo: ouh iyaa pulpen tarjo habis bu,.. beli pulpen baru ya bu? 
+
+Ibu: boleh, kalau gitu ambil uang 5 ribu di meja kamar ibu yaa.
+
+Tarjo: baik ibuu (Tarjo pergi ke meja di kamar ibu)
+<<moveCharacter Tarjo Cutscene1Target2>>
+
+uang manakah yang akan Tarjo ambil? (Tarjo memperhatikan uang satu-persatu)
+<<startMinigame MinigameTemp>>
+<<moveCharacter Tarjo Cutscene1Target3>>
+<<switchToPlayerCamera>>
+===
