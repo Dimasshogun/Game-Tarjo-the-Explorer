@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -30,7 +32,7 @@ namespace Code.Scripts.Minigame
         public AudioClip[] correct;
         public AudioClip incorrect;
 
-        public int correctAnswer;
+        public List<MinigameDropTarget> dropTargets = new List<MinigameDropTarget>();
 
         public bool completed;
         
@@ -46,25 +48,42 @@ namespace Code.Scripts.Minigame
             {
                 endScreen = GameObject.Find("EndScreen");
             }
-            endScreen.SetActive(false);
-        }
 
-        public bool CheckAnswer(int answer)
-        {
-            return answer == correctAnswer;
+            if (dropTargets.Count == 0)
+            {
+                dropTargets.AddRange(FindObjectsOfType<MinigameDropTarget>());
+            }
+            endScreen.SetActive(false);
         }
 
         public void PlayCorrect()
         {
             source.clip = correct[Random.Range(0, correct.Length)];
             source.Play();
-            endScreen.SetActive(true);
+            CheckComplete();
         }
         
         public void PlayIncorrect()
         {
             source.clip = incorrect;
             source.Play();
+        }
+
+        private void CheckComplete()
+        {
+            if (endScreen.activeSelf)
+            {
+                return;
+            }
+
+            foreach (var target in dropTargets)
+            {
+                if (!target.isCorrect)
+                {
+                    return;
+                }
+            }
+            endScreen.SetActive(true);
         }
     }
 }
