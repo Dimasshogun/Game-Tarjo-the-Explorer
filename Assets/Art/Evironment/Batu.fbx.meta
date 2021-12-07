@@ -1,39 +1,9 @@
 fileFormatVersion: 2
-guid: bb8bc2cbdbe73075da20d9d272d42286
+guid: bb56e6e961e05cb44be99e6ce815c751
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cat
-    second: {fileID: 2100000, guid: fbd00afa9af9d0042865a76ff431ea0d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: besi
-    second: {fileID: 2100000, guid: e2ffe6eea534f5743a476146a155d7be, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: genteng
-    second: {fileID: 2100000, guid: f0e9cfd993cf1d444817bc2529b4a553, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: kaca
-    second: {fileID: 2100000, guid: 5d63ace553a250649b9a37d34995f57c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: kusen
-    second: {fileID: 2100000, guid: c722241d4c42061409f971a3647d5a11, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pintu
-    second: {fileID: 2100000, guid: cd5c42e954eae814d94f49f30e18417c, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
