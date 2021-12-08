@@ -65,7 +65,7 @@ namespace Code.Scripts.Character
             {
                 Cursor.lockState = CursorLockMode.None;
                 var targetNpcCam = _targetNpc.gameObject.GetComponentInChildren<CameraInstance>();
-                CameraManager.Instance.SwitchVirtualCam(targetNpcCam);
+                StartCoroutine(CameraManager.Instance.SwitchVirtualCam(targetNpcCam));
             }
             else
             {

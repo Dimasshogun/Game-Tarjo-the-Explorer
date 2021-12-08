@@ -28,7 +28,7 @@ namespace Code.Scripts.Quest
 
             playerMovement.enabled = false;
             yield return new WaitForSeconds(1.0f);
-            CameraManager.Instance.SwitchVirtualCam(npcCamera);
+            StartCoroutine(CameraManager.Instance.SwitchVirtualCam(npcCamera));
             
             yield return new WaitForSeconds(2.0f);
             QuestManager.Instance.StartQuest(new []{questCode});

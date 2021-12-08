@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
@@ -35,14 +36,24 @@ namespace Code.Scripts
             cameraInstances.AddRange(FindObjectsOfType<CameraInstance>());
         }
 
-        public void SwitchVirtualCam(CameraInstance npcCamera)
+        public IEnumerator SwitchVirtualCam(CameraInstance targetCamera, CinemachineBlendDefinition.Style blendStyle = CinemachineBlendDefinition.Style.EaseIn)
         {
             if (_currentVirtualCam != null)
             {
                 _currentVirtualCam.virtualCam.Priority = _currentVirtualCam.originalPriority;
             }
-            npcCamera.virtualCam.Priority = _playerCamera.Priority + 1;
-            _currentVirtualCam = npcCamera;
+            
+            var cinemachineBrain = Camera.main.GetComponent<CinemachineBrain>();
+            var initialBlendStyle = cinemachineBrain.m_DefaultBlend.m_Style;
+            
+            cinemachineBrain.m_DefaultBlend.m_Style = blendStyle;
+            
+            targetCamera.virtualCam.Priority = _playerCamera.Priority + 1;
+            _currentVirtualCam = targetCamera;
+
+            yield return new WaitUntil(() => cinemachineBrain.IsLive(targetCamera.virtualCam));
+            
+            cinemachineBrain.m_DefaultBlend.m_Style = initialBlendStyle;
         }
 
         public void SwitchToPlayerCam()

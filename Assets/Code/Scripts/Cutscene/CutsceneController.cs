@@ -1,12 +1,11 @@
-using System;
 using System.Collections;
-using Code.Scripts.Character;
+using Cinemachine;
 using UnityEngine;
 using Yarn.Unity;
 
-namespace Code.Scripts
+namespace Code.Scripts.Cutscene
 {
-    public class CutsceneManager : MonoBehaviour
+    public class CutsceneController : MonoBehaviour
     {
         private void Start()
         {
@@ -18,9 +17,26 @@ namespace Code.Scripts
         public void SwitchCutsceneCam(string[] parameters)
         {
             var cameraName = parameters[0];
+            var blendStyle = parameters[1];
+
+            CinemachineBlendDefinition.Style targetBlendStyle;
+
+            switch (blendStyle)
+            {
+                case "Cut":
+                    targetBlendStyle = CinemachineBlendDefinition.Style.Cut;
+                    break;
+                case "EaseIn":
+                    targetBlendStyle = CinemachineBlendDefinition.Style.EaseIn;
+                    break;
+                default:
+                    targetBlendStyle = CinemachineBlendDefinition.Style.EaseIn;
+                    break;
+            }
+            
             var cutsceneCamera = CameraManager.Instance.cameraInstances.Find(cam => cam.cameraName == cameraName);
             
-            CameraManager.Instance.SwitchVirtualCam(cutsceneCamera);
+            StartCoroutine(CameraManager.Instance.SwitchVirtualCam(cutsceneCamera, targetBlendStyle));
         }
         
         public void SwitchToPlayerCamera(string[] parameters)
@@ -32,16 +48,28 @@ namespace Code.Scripts
         {
             var characterName = parameters[0];
             var targetName = parameters[1];
+            var moveOption = parameters[2];
 
             var character = GameObject.Find(characterName);
             var targetTransform = GameObject.Find(targetName).GetComponent<Transform>();
 
-            StartCoroutine(MoveCharacter(character, targetTransform, onComplete));
+            StartCoroutine(moveOption == "teleport"
+                ? TeleportCharacter(character, targetTransform, onComplete)
+                : MoveCharacter(character, targetTransform, onComplete));
+        }
+        
+        public IEnumerator TeleportCharacter(GameObject character, Transform targetTransform, System.Action onComplete)
+        {
+            while (Vector3.Distance(character.transform.position, targetTransform.position) > 1)
+            {
+                character.transform.position = targetTransform.position;
+                yield return null;
+            }
+            onComplete();
         }
 
         public IEnumerator MoveCharacter(GameObject character, Transform targetTransform, System.Action onComplete)
         {
-            Debug.Log($"move {character.name} to {targetTransform.position}");
             while (Vector3.Distance(character.transform.position, targetTransform.position) > 1)
             {
                 character.transform.position = Vector3.MoveTowards(character.transform.position, targetTransform.position, 0.5f);
