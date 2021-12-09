@@ -202,9 +202,11 @@ File extension: `WAV` while mixing, `OGG` in game.
 
 Preload small sound clips to memory, load on the fly for longer music and less frequent ambient noise files.
 
-## Script Dialog dan NPC Quest
+## Panduan Penulisan Konten
 
-Panduan penulisan Script dialog dan NPC Quest dapat diakses [disini](Assets/Docs/howTo_dialogue.md).
+- Panduan penulisan Script dialog dapat diakses [disini](Assets/Docs/howTo_dialogue.md).
+- Panduan penulisan Quest dapat diakses [disini](Assets/Docs/howTo_quest.md).
+- Panduan setup cutscene dapat diakses [disini](Assets/Docs/howTo_cutscene.md).
 
 # Be Consistent
 

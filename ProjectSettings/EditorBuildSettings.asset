@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/MinigameTemp.unity
     guid: 4b21ded7819c68a629b5616894d984e9
+  - enabled: 1
+    path: Assets/Level/Scenes/Cutscenes/CutsceneLevel1Intro.unity
+    guid: 64966a59834da4aca98d94a4555065e6
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 15c261034139b4f1390129639a7edd76, type: 2}
