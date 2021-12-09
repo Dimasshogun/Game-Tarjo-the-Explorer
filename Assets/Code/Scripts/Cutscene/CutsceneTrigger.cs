@@ -24,7 +24,10 @@ namespace Code.Scripts.Cutscene
 
         private IEnumerator PlayCutscene()
         {
-            SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+            if (!SceneManager.GetSceneByName(scene).isLoaded)
+            {
+                SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+            }
             
             yield return new WaitUntil(() => SceneManager.GetSceneByName(scene).isLoaded);
 
