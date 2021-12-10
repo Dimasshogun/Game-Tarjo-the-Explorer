@@ -70,7 +70,7 @@ namespace Code.Scripts.Cutscene
 
         public IEnumerator MoveCharacter(GameObject character, Transform targetTransform, System.Action onComplete)
         {
-            while (Vector3.Distance(character.transform.position, targetTransform.position) > 1)
+            while (Vector3.Distance(character.transform.position, targetTransform.position) > 0.2f)
             {
                 character.transform.position = Vector3.MoveTowards(character.transform.position, targetTransform.position, 0.5f);
                 yield return null;

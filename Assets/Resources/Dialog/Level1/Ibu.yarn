@@ -19,7 +19,16 @@ Tarjo: baik ibuu (Tarjo pergi ke meja di kamar ibu)
 <<moveCharacter Tarjo Cutscene1Target2 walk>>
 
 uang manakah yang akan Tarjo ambil? (Tarjo memperhatikan uang satu-persatu)
-<<startMinigame MinigameTemp>>
+<<startMinigame Minigames1>>
+<<moveCharacter Tarjo Cutscene1Target1 walk>>
+Tarjo: Sudah bu, tarjo berangkat yaaaaaa!!
+Ibu : Hati-hati di jalan, Tarjo. Jadi anak pintar, ya.
+Tarjo: Pasti, buu. Baayyy
 <<moveCharacter Tarjo Cutscene1Target3 walk>>
+<<switchCamera Cutscene1Cam2 EaseIn>>
+Tarjo: Hari ini uangku lebih banyak dari biasanya. ini uang pertama 5 ribu, dan ini uang kedua 5 ribu. Jadi jumlah uangku berapa ya?
+<<startMinigame Minigames2>>
+Tarjo : YAPP!! Aku memang anak pintarr! Ayo lanjut jalann..
+Tarjo : Lalala lalalaa..
 <<switchToPlayerCamera>>
 ===
