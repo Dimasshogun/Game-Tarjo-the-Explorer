@@ -41,6 +41,8 @@ namespace Code.Scripts.Minigame
                 return;
             }
 
+            Debug.Log(hit.collider.name);
+
             if (hit.collider != null && hit.collider.gameObject.CompareTag("Draggable"))
             {
                 StartCoroutine(DragUpdate(hit.collider.gameObject));
@@ -53,9 +55,11 @@ namespace Code.Scripts.Minigame
             draggedObject.TryGetComponent<Rigidbody>(out var rb);
             draggedObject.TryGetComponent<IDrag>(out var iDrag);
             
+            iDrag?.OnDragStart();
             while (mouseClick.ReadValue<float>() != 0)
             {
                 var ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+                iDrag?.OnDrag();
                 if (rb != null)
                 {
                     var direction = ray.GetPoint(initialDistance) - draggedObject.transform.position;

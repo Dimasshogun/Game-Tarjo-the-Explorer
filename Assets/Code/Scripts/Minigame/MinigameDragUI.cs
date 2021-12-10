@@ -29,6 +29,11 @@ namespace Code.Scripts.Minigame
             target = null;
         }
 
+        public void OnDrag()
+        {
+            
+        }
+
         public void OnDragEnd()
         {
             if (target == null)

@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Level/Scenes/Cutscenes/CutsceneLevel1Intro.unity
     guid: 64966a59834da4aca98d94a4555065e6
   - enabled: 1
+    path: Assets/Level/Scenes/Minigames/MinigameBridge.unity
+    guid: e8de1e402bb8ae47fbee626388945350
+  - enabled: 1
     path: Assets/Level/Scenes/Minigames/Minigames1.unity
     guid: c6d6fce89676f3b4c8733c9bb1ebd458
   - enabled: 1

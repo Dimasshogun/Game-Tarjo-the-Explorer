@@ -1,0 +1,25 @@
+{
+  "code": "BridgeQuest",
+  "name": "Perbaiki Jembatan",
+  "startingType": 1,
+  "stages": [
+    {
+      "title": "Kenapa jembatan nya?",
+      "instruction": "Cek apa yang terjadi di jembatan!",
+      "relatedNpc": "Bridge",
+      "status": 0
+    },
+    {
+      "title": "Perbaiki Jembatan",
+      "instruction": "Letakkan balok jembatan pada tempatnya masing masing",
+      "relatedNpc": "Bridge",
+      "status": 1
+    },
+    {
+      "title": "Jembatan Diperbaiki",
+      "instruction": "Yey! Kamu berhasil memperbaiki jembatan!",
+      "relatedNpc": "Bridge",
+      "status": 3
+    }
+  ]
+}
