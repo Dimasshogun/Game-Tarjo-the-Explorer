@@ -1329,7 +1329,7 @@ GameObject:
   - component: {fileID: 5726233150999737991}
   - component: {fileID: 5726233150999737988}
   m_Layer: 0
-  m_Name: DialogueUI
+  m_Name: DialogueCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1947,7 +1947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5726233151864569275}
   m_Layer: 0
-  m_Name: DialogueContainer
+  m_Name: DialogueUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

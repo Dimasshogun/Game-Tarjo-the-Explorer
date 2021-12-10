@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731319, g: 0.38074932, b: 0.35872564, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -326,6 +326,38 @@ MonoBehaviour:
       m_Flags: 0
     - m_Name: 
       m_Id: 9dd3388b-d0ab-4491-b5dc-da7343ca6eb5
+      m_Path: <Touchscreen>/touch0
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Click
+      m_Flags: 0
+    - m_Name: 
+      m_Id: de8cd3be-3304-40df-ad9c-93b441932dcd
+      m_Path: <Touchscreen>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Click
+      m_Flags: 0
+    - m_Name: 
+      m_Id: f1084a34-9cea-477e-b2a9-a7fb8404fc30
+      m_Path: <Touchscreen>/primaryTouch
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Click
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 7507a3a4-7c0d-4083-9024-08fd150afda1
+      m_Path: <Touchscreen>/touch1
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Click
+      m_Flags: 0
+    - m_Name: 
+      m_Id: a04dc390-4f82-4e7c-bda6-feca0a8d939b
       m_Path: <Touchscreen>/press
       m_Interactions: 
       m_Processors: 

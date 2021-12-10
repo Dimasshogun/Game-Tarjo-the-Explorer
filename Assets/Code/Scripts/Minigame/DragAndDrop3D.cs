@@ -7,14 +7,21 @@ namespace Code.Scripts.Minigame
 {
     public class DragAndDrop3D : MonoBehaviour
     {
-        [SerializeField] private InputAction mouseClick;
         [SerializeField] private float mouseSpeedPhysics = 10.0f;
         [SerializeField] private float mouseSpeed = 0.1f;
         
         private Camera _mainCamera;
         private WaitForFixedUpdate _waitForFixedUpdate = new WaitForFixedUpdate();
 
+        private MinigameControls _controls;
+
         private Vector3 _velocity = Vector3.zero;
+
+        private void Awake()
+        {
+            _controls = new MinigameControls();
+            _controls.Player.TouchPress.performed += ControlPressed;
+        }
 
         private void Start()
         {
@@ -23,19 +30,17 @@ namespace Code.Scripts.Minigame
 
         private void OnEnable()
         {
-            mouseClick.Enable();
-            mouseClick.performed += MousePressed;
+            _controls.Enable();
         }
 
         private void OnDisable()
         {
-            mouseClick.Disable();
-            mouseClick.performed -= MousePressed;
+            _controls.Disable();
         }
 
-        private void MousePressed(InputAction.CallbackContext context)
+        private void ControlPressed(InputAction.CallbackContext context)
         {
-            var ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+            var ray = _mainCamera.ScreenPointToRay(_controls.Player.TouchPoint.ReadValue<Vector2>());
             if (!Physics.Raycast(ray, out var hit))
             {
                 return;
@@ -45,20 +50,20 @@ namespace Code.Scripts.Minigame
 
             if (hit.collider != null && hit.collider.gameObject.CompareTag("Draggable"))
             {
-                StartCoroutine(DragUpdate(hit.collider.gameObject));
+                StartCoroutine(DragUpdateTouch(hit.collider.gameObject));
             }
         }
 
-        public virtual IEnumerator DragUpdate(GameObject draggedObject)
+        public virtual IEnumerator DragUpdateTouch(GameObject draggedObject)
         {
             float initialDistance = Vector3.Distance(draggedObject.transform.position, _mainCamera.transform.position);
             draggedObject.TryGetComponent<Rigidbody>(out var rb);
             draggedObject.TryGetComponent<IDrag>(out var iDrag);
-            
             iDrag?.OnDragStart();
-            while (mouseClick.ReadValue<float>() != 0)
+            
+            while (_controls.Player.TouchPress.ReadValue<float>() != 0)
             {
-                var ray = _mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+                var ray = _mainCamera.ScreenPointToRay(_controls.Player.TouchPoint.ReadValue<Vector2>());
                 iDrag?.OnDrag();
                 if (rb != null)
                 {

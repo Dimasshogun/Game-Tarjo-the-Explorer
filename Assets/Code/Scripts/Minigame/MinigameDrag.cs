@@ -25,12 +25,7 @@ namespace Code.Scripts.Minigame
         {
             _rb.isKinematic = false;
             _rb.constraints = RigidbodyConstraints.FreezeRotation;
-            if (target == null)
-            {
-                return;
-            }
-
-            target.isCorrect = false;
+            
             target = null;
         }
 
@@ -54,6 +49,7 @@ namespace Code.Scripts.Minigame
                 target.isCorrect = true;
                 transform.position = target.transform.position;
                 transform.rotation = target.transform.rotation;
+                target.enabled = false;
                 MinigameManager.Instance.PlayCorrect();
                 _rb.isKinematic = true;
                 return;

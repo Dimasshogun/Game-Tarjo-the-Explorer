@@ -96,6 +96,23 @@ namespace Code.Scripts
         {
             progressBar.fillAmount = Mathf.MoveTowards(progressBar.fillAmount, _fillTarget, 2 * Time.deltaTime);
         }
+        
+        public IEnumerator ChangeScene(string scene)
+        {
+            progressBar.fillAmount = 0;
+            loadingScreen.SetActive(true);
+            
+            var sceneToLoad = SceneManager.LoadSceneAsync(scene);
+        
+            do
+            {
+                _fillTarget = sceneToLoad.progress;
+                yield return null;
+                
+            } while (progressBar.fillAmount < 0.8f);
+
+            loadingScreen.SetActive(false);
+        }
 
         public void ExitGame() {
             Application.Quit();
