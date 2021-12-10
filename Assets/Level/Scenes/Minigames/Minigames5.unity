@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731319, g: 0.38074932, b: 0.35872564, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5662893, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012397766, y: -44.542}
+  m_AnchoredPosition: {x: -0.000011444092, y: -44.542}
   m_SizeDelta: {x: 144.3827, y: 89.085}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &104881604
@@ -237,8 +237,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -293}
-  m_SizeDelta: {x: 482.7324, y: 340.1965}
+  m_AnchoredPosition: {x: -0.000030518, y: -284}
+  m_SizeDelta: {x: 242.4036, y: 304.6072}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &187847299
 MonoBehaviour:
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b1993bc7daa65294abb348122564f27b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 68b1e5425f95efe42b65bdb35ea785f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -366,9 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e025e0c5d7aa40d3b124b598b7ba0f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetDrop: {fileID: 0}
   speed: 0
-  answerValue: 3
 --- !u!1 &357961163
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +503,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5f2857b64be54184e889d5e81069a988, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b67ff3ac6a108aa46aab4e4b2ddefe38, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -633,8 +631,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 683.73, y: 327.36}
-  m_SizeDelta: {x: 482.7324, y: 340.1965}
+  m_AnchoredPosition: {x: 712.32605, y: 305.1524}
+  m_SizeDelta: {x: 242.4036, y: 304.6072}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &870837411
 MonoBehaviour:
@@ -656,7 +654,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b1993bc7daa65294abb348122564f27b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 68b1e5425f95efe42b65bdb35ea785f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -686,9 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e025e0c5d7aa40d3b124b598b7ba0f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetDrop: {fileID: 0}
   speed: 0
-  answerValue: 4
 --- !u!1 &1212739636
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,7 +983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1614927805
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1234,7 +1230,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5ccca6ba32414ae4096bcf27f4e815cd, type: 3}
   - {fileID: 8300000, guid: b8f9f7ae3f3ce27498ffd1be927b2f57, type: 3}
   incorrect: {fileID: 8300000, guid: b298a802f7f07ca46b894f2574b74aa5, type: 3}
-  correctAnswer: 4
+  dropTargets: []
   completed: 0
 --- !u!1 &1767074110
 GameObject:
@@ -1324,9 +1320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e025e0c5d7aa40d3b124b598b7ba0f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetDrop: {fileID: 0}
   speed: 0
-  answerValue: 2
 --- !u!1 &1884326417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,9 +1547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e025e0c5d7aa40d3b124b598b7ba0f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetDrop: {fileID: 0}
   speed: 0
-  answerValue: 1
 --- !u!1 &2011982128
 GameObject:
   m_ObjectHideFlags: 0
