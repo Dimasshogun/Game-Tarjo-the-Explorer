@@ -42,9 +42,9 @@ namespace Code.Scripts.Quest
             else
             {
                 yield return new WaitForSeconds(2.0f);
+                QuestManager.Instance.StartQuest(new []{questCode});
             }
             
-            QuestManager.Instance.StartQuest(new []{questCode});
             
             yield return new WaitForSeconds(2.0f);
             CameraManager.Instance.SwitchToPlayerCam();

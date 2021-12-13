@@ -3,17 +3,17 @@ tags:
 colorID: 0
 position: 860,383
 ---
-<<startQuest QuestManager BridgeQuest>>
+<<startQuest BridgeQuest>>
 Tarjo: Waduh. Jembatannya lagi rusak, kayunya pada lepas. Trus aku lewatnya gimana ya?
 Tarjo: Oh, lompat aja kali ya? 
 Tarjo: Tapi nanti kalo aku jatuh, aku nggak jadi pergi sekolah? hemmm (Tarjo melihat sekeliling, lalu menemukan potongan kayu)
 
-<<advanceQuestStage QuestManager BridgeQuest 1>>
+<<advanceQuestStage BridgeQuest 1>>
 
 Tarjo: Ahaa? Potongan kayu itu. Kayaknya itu potongan kayu jembatan. Aku coba pasang ah..
 
 <<startMinigame MinigameBridge>>
-<<advanceQuestStage QuestManager BridgeQuest 2>>
+<<advanceQuestStage BridgeQuest 2>>
 
 <<if questStage("BridgeQuest", 2)>>
     Tarjo: YEEYYY!! Sekarang mari kita melewati jembatan ini, dan lanjut pergi ke sekolahh!
