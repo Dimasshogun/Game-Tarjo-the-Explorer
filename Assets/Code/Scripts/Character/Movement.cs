@@ -79,12 +79,14 @@ namespace Code.Scripts.Character
         {
             _controls.Player.Enable();
             gameplayUI.SetActive(true);
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         private void OnDisable()
         {
             _controls.Player.Disable();
             gameplayUI.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

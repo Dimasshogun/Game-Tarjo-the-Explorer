@@ -1,0 +1,8 @@
+{
+  "levelSetups": [
+    {
+      "rootScene": "Level1",
+      "additionalScenes": ["MapLayout4"]
+    }
+  ]
+}
