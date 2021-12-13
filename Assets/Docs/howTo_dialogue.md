@@ -55,11 +55,11 @@ Command yang ada di project ini (akan terus diupdate sepanjang proses developmen
 
 - startQuest, untuk memulai quest dari NPC
   ```
-  <<startQuest QuestManager QuestCode>>
+  <<startQuest QuestCode>>
   ```
 - advanceQuestStage, untuk maju ke index stage quest yang disebutkan
   ```
-  <<advanceQuestStage QuestManager QuestCode stage>>
+  <<advanceQuestStage QuestCode stage>>
   ```
 - startMinigame, untuk memulai minigame. Command ini menunda dialogue sampai minigame diselesaikan
   ```
@@ -98,7 +98,9 @@ Function yang ada di project ini (akan terus diopdate sepanjang proses developme
 
 Cara membuat function bisa dilihat dokumentasi untuk [DialogueRunner.AddFunction](https://yarnspinner.dev/api/yarn.unity/dialoguerunner/yarn.unity.dialoguerunner.addfunctionsystem.stringsystem.int32yarn.returningfunction/)
 
-Referensi penulisan Yarn script di project ini bisa lihat file [Ucup.yarn](../Resources/Dialog/Level1/Ucup.yarn) dan [Ibu.yarn](../Resources/Dialog/Level1/Ibu.yarn)
+Referensi penulisan Yarn script di project ini bisa lihat,
+- file [Alia.yarn](../Resources/Dialog/Level1/Alia.yarn), lebih banyak command dan function yang berhubungan dengan quest
+- file [Ibu.yarn](../Resources/Dialog/Level1/Ibu.yarn), lebih banyak command yang berhubungan dengan cutscene
 
 > Perhatian: Saat penulisan di Yarn Editor jika ingin Yarn script nya bisa dicoba dijalankan langsung, jangan dulu menggunakan Command dan Function yang ada di project. Sebagai alternatif bisa gunakan fitur variables yang diberikan oleh Yarn Spinner sebagai placeholder.
 
