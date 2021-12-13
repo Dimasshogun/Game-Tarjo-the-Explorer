@@ -1,0 +1,37 @@
+{
+  "code": "PulpenQuest",
+  "name": "Beli Pulpen",
+  "startingType": 1,
+  "stages": [
+    {
+      "title": "Beli Pulpen",
+      "instruction": "Nanti ada ujian, dan pulpen kamu habis",
+      "status": 1,
+      "relatedNpc": ""
+    },
+    {
+      "title": "Kamu butuh uang untuk membeli pulpen",
+      "instruction": "Ambil uang didalam rumah, diatas meja",
+      "status": 1,
+      "relatedNpc": ""
+    },
+    {
+      "title": "Beli pulpen dimana?",
+      "instruction": "Kamu sudah punya cukup uang, sekarang dimana kamu bisa membeli uang?",
+      "status": 1,
+      "relatedNpc": "MangAsep"
+    },
+    {
+      "title": "Beli pulpen di warung",
+      "instruction": "Warung itu sepertinya menjual pulpen",
+      "status": 1,
+      "relatedNpc": "MangAsep"
+    },
+    {
+      "title": "Pulpen sudah didapatkan",
+      "instruction": "Yey! Kamu sudah punya pulpen",
+      "status": 3,
+      "relatedNpc": "MangAsep"
+    }
+  ]
+}

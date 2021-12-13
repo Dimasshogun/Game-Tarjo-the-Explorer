@@ -57,6 +57,9 @@ namespace Code.Scripts.Quest
                 dialogueRunner = FindObjectOfType<DialogueRunner>();
             }
             
+            dialogueRunner.AddCommandHandler("startQuest", StartQuest);
+            dialogueRunner.AddCommandHandler("advanceQuestStage", AdvanceQuestStage);
+            
             dialogueRunner.AddFunction("questStage", 2, delegate (Yarn.Value[] parameters)
             {
                 var questCode = parameters[0].AsString;
@@ -66,7 +69,6 @@ namespace Code.Scripts.Quest
             });
         }
         
-        [YarnCommand("startQuest")]
         public void StartQuest(string[] parameters)
         {
             var questCode = parameters[0];
@@ -78,7 +80,6 @@ namespace Code.Scripts.Quest
             QuestNotification.Instance.ShowNotification(quest.stages[quest.currentStage]);
         }
 
-        [YarnCommand("advanceQuestStage")]
         public void AdvanceQuestStage(string[] parameters)
         {
             var questCode = parameters[0];
