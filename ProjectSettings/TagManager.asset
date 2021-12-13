@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Building
   - NPC
+  - Draggable
   layers:
   - Default
   - TransparentFX

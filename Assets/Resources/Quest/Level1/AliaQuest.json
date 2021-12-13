@@ -1,0 +1,31 @@
+{
+  "code": "AliaQuest",
+  "name": "Tolong Alia",
+  "startingType": 1,
+  "stages": [
+    {
+      "title": "Kenapa Alia menangis?",
+      "instruction": "Tanyakan kenapa Alia menangis",
+      "relatedNpc": "Alia",
+      "status": 0
+    },
+    {
+      "title": "Perbaiki Uang Alia",
+      "instruction": "Perbaiki Uang Alia",
+      "relatedNpc": "Alia",
+      "status": 1
+    },
+    {
+      "title": "Selesai",
+      "instruction": "Kamu telah memperbaiki uang Alia",
+      "relatedNpc": "Alia",
+      "status": 3
+    },
+    {
+      "title": "Gagal",
+      "instruction": "Kamu gagal memperbaiki uang Alia",
+      "relatedNpc": "Alia",
+      "status": 4
+    }
+  ]
+}
