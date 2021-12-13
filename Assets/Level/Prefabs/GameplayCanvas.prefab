@@ -735,7 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5888087310631118101}
   m_Layer: 5
-  m_Name: Container
+  m_Name: GameplayUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -760,7 +760,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -100, y: -100.000015}
+  m_SizeDelta: {x: -200, y: -200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5888087310741978415
 GameObject:
@@ -775,7 +775,7 @@ GameObject:
   - component: {fileID: 5888087310741978409}
   - component: {fileID: 5888087310741978414}
   m_Layer: 5
-  m_Name: GameplayUI
+  m_Name: GameplayCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

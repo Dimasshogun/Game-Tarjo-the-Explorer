@@ -93,7 +93,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3148433817217289878
 RectTransform:
   m_ObjectHideFlags: 0
@@ -506,5 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 554dc00bf4e498642aec7db3036c385c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingScreen: {fileID: 3148433818356929921}
+  loadingScreen: {fileID: 3148433817217289879}
   progressBar: {fileID: 3148433817992952712}
+  levels:
+    levelSetups: []

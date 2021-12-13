@@ -34,6 +34,7 @@ namespace Code.Scripts
         [SerializeField] private Image progressBar;
 
         private float _fillTarget;
+        private bool _isLoading;
 
         [SerializeField] private Levels levels;
 
@@ -56,6 +57,14 @@ namespace Code.Scripts
             levels = JsonUtility.FromJson<Levels>(levelScenesJson.ToString());
         }
 
+        private void Update()
+        {
+            if (_isLoading)
+            {
+                progressBar.fillAmount = Mathf.MoveTowards(progressBar.fillAmount, _fillTarget, 2 * Time.deltaTime);
+            }
+        }
+
         public void StartLoadLevel(string level)
         {
             var sceneNamesToLoad = levels.levelSetups.Find(setup => setup.rootScene == level);
@@ -65,6 +74,7 @@ namespace Code.Scripts
 
         private IEnumerator LoadLevel(LevelSetup levelSetup)
         {
+            _isLoading = true;
             progressBar.fillAmount = 0;
             loadingScreen.SetActive(true);
         
@@ -87,31 +97,40 @@ namespace Code.Scripts
                 _fillTarget = newTarget / scenesToLoad.Count;
 
                 yield return null;
-            } while (progressBar.fillAmount < 0.9f);
+            } while (_fillTarget < 0.9f);
+            
+            yield return new WaitUntil(() => progressBar.fillAmount >= 0.9f);
 
             loadingScreen.SetActive(false);
+            _isLoading = false;
         }
 
-        private void Update()
+        public void StartChangeScene(string scene)
         {
-            progressBar.fillAmount = Mathf.MoveTowards(progressBar.fillAmount, _fillTarget, 2 * Time.deltaTime);
+            StartCoroutine(ChangeScene(scene));
         }
-        
-        public IEnumerator ChangeScene(string scene)
+
+        private IEnumerator ChangeScene(string scene)
         {
+            _isLoading = true;
             progressBar.fillAmount = 0;
             loadingScreen.SetActive(true);
             
             var sceneToLoad = SceneManager.LoadSceneAsync(scene);
+            sceneToLoad.allowSceneActivation = false;
         
             do
             {
                 _fillTarget = sceneToLoad.progress;
                 yield return null;
                 
-            } while (progressBar.fillAmount < 0.8f);
+            } while (_fillTarget < 0.9f);
+            
+            yield return new WaitUntil(() => progressBar.fillAmount >= 0.9f);
 
+            sceneToLoad.allowSceneActivation = true;
             loadingScreen.SetActive(false);
+            _isLoading = false;
         }
 
         public void ExitGame() {

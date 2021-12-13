@@ -5,10 +5,18 @@ namespace Code.Scripts
 {
     public class SceneLoader : MonoBehaviour
     {
+        public void StartLoadLevel(string level)
+        {
+            LevelManager.Instance.StartLoadLevel(level);
+        }
         public void StartChangeScene(string scene)
         {
-            // StartCoroutine(LevelManager.Instance.ChangeScene(scene));
-            SceneManager.LoadScene(scene);
+            LevelManager.Instance.StartChangeScene(scene);
+        }
+        
+        public void ExitGame()
+        {
+            LevelManager.Instance.ExitGame();
         }
     }
 }
