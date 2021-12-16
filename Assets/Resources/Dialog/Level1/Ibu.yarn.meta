@@ -8,7 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
+  baseLanguageID: en-US
   stringIDs:
   - Ibu-IbuMinigame-0
   - Ibu-IbuMinigame-1
@@ -17,8 +17,14 @@ ScriptedImporter:
   - Ibu-IbuMinigame-4
   - Ibu-IbuMinigame-5
   - Ibu-IbuMinigame-6
+  - Ibu-IbuMinigame-7
+  - Ibu-IbuMinigame-8
+  - Ibu-IbuMinigame-9
+  - Ibu-IbuMinigame-10
+  - Ibu-IbuMinigame-11
+  - Ibu-IbuMinigame-12
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: a33f81ced31e89d21ad942d6c2de08ca, type: 3}
   localizations: []
