@@ -58,6 +58,11 @@ namespace Code.Scripts
 
         public void SwitchToPlayerCam()
         {
+            if (_currentVirtualCam == null)
+            {
+                return;
+            }
+            
             _currentVirtualCam.virtualCam.Priority = _currentVirtualCam.originalPriority;
         }
     }
