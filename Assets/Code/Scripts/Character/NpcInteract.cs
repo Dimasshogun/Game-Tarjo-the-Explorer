@@ -33,7 +33,14 @@ namespace Code.Scripts.Character
 
         private void OnEnable()
         {
-            interactButton.gameObject.SetActive(true);
+            if (_targetNpc != null && dialogueRunner.NodeExists(_targetNpc.entryNode))
+            {
+                interactButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                enabled = false;
+            }
         }
         
         private void OnDisable()
