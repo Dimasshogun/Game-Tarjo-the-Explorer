@@ -16,8 +16,8 @@ namespace Code.Scripts.Character
         {
             if (other.CompareTag("NPC"))
             {
-                _interact.enabled = true;
                 _interact.SetTargetNpc(other.gameObject);
+                _interact.enabled = true;
             }
         }
         private void OnTriggerExit(Collider other)
