@@ -3,7 +3,12 @@ guid: bb8bc2cbdbe73075da20d9d272d42286
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: house_blue
+    second: {fileID: 2800000, guid: dc717d7a6cb41fd42905abe1b6fafa50, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
