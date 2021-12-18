@@ -1,14 +1,15 @@
 title: BridgeQuest
 tags: 
 colorID: 0
-position: 860,383
+position: 858,380
 ---
-<<startQuest BridgeQuest>>
-Tarjo: Waduh. Jembatannya lagi rusak, kayunya pada lepas. Trus aku lewatnya gimana ya?
+<<if questStage("BridgeQuest", 0)>>
+Tarjo: Trus aku lewatnya gimana ya?
 Tarjo: Oh, lompat aja kali ya? 
 Tarjo: Tapi nanti kalo aku jatuh, aku nggak jadi pergi sekolah? hemmm (Tarjo melihat sekeliling, lalu menemukan potongan kayu)
 
 <<advanceQuestStage BridgeQuest 1>>
+<<endif>>
 
 Tarjo: Ahaa? Potongan kayu itu. Kayaknya itu potongan kayu jembatan. Aku coba pasang ah..
 
@@ -17,5 +18,18 @@ Tarjo: Ahaa? Potongan kayu itu. Kayaknya itu potongan kayu jembatan. Aku coba pa
 
 <<if questStage("BridgeQuest", 2)>>
     Tarjo: YEEYYY!! Sekarang mari kita melewati jembatan ini, dan lanjut pergi ke sekolahh!
+<<endif>>
+===
+title: Bridge
+tags: 
+colorID: 8
+position: 421,276
+---
+<<if questStage("BridgeQuest", 0)>>
+    Tarjo: Waduh. Jembatannya lagi rusak, kayunya pada lepas.
+        [[BridgeQuest]]
+<<endif>>
+<<if questStage("BridgeQuest", 2)>>
+    Tarjo: Terimakasih telah membantu aku Tarjo :D
 <<endif>>
 ===

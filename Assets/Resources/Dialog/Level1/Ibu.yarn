@@ -1,7 +1,7 @@
 title: IbuMinigame
 tags: 
 colorID: 0
-position: -68,-603
+position: -69,-603
 ---
 <<moveCharacter Tarjo Cutscene1Target2 teleport>>
 <<switchCamera Cutscene1Cam1 Cut>>
@@ -9,7 +9,7 @@ Di pagi yang begitu cerah, Tarjo akan segera pergi ke sekolah.
 <<moveCharacter Tarjo Cutscene1Target1 walk>>
 Tarjo: Bu tarjo pergi kesekolah dulu yah,
 
-Ibu: iya ini uang sakunya ya jo (ibu memberi uang 3k)
+Ibu: iya ini uang sakunya ya jo (ibu memberi uang 5 ribu)
 
 Tarjo: ouh iyaa pulpen tarjo habis bu,.. beli pulpen baru ya bu? 
 <<startQuest PulpenQuest>>
@@ -37,4 +37,11 @@ Tarjo : Lalala lalalaa..
 
 <<advanceQuestStage PulpenQuest 2>>
 <<switchToPlayerCamera>>
+===
+title: Ibu
+tags: 
+colorID: 0
+position: -417,-696
+---
+Ibu : Hati-hati di jalan, Tarjo. Jadi anak pintar, ya.
 ===

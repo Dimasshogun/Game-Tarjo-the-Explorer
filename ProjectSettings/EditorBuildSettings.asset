@@ -44,5 +44,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/Minigames/Minigames5.unity
     guid: 859892ebe7e4e4744852bad43069475b
+  - enabled: 1
+    path: Assets/Level/Scenes/Minigames/Minigames6.unity
+    guid: 4809bf350d0614146b4d8c39a5b2d845
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 15c261034139b4f1390129639a7edd76, type: 2}

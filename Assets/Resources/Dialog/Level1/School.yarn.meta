@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9c8cb4c3002f3497d917a39f3151710e
+guid: 81ba4597caa9aff4c86b13df3d2ae3fa
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -10,13 +10,15 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-US
   stringIDs:
-  - BridgeQuest-BridgeQuest-0
-  - BridgeQuest-BridgeQuest-1
-  - BridgeQuest-BridgeQuest-2
-  - BridgeQuest-BridgeQuest-3
-  - BridgeQuest-BridgeQuest-4
+  - MangAsep-MangAsep-0
+  - MangAsep-MangAsep-1
+  - MangAsep-MangAsep-2
+  - MangAsep-MangAsep-3
+  - MangAsep-MangAsep-4
+  - MangAsep-MangAsep-5
+  - MangAsep-MangAsep-6
   compilationStatus: 1
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
-  baseLanguage: {fileID: 7128917941130120860, guid: 9c8cb4c3002f3497d917a39f3151710e, type: 3}
+  baseLanguage: {fileID: 7128917941130120860, guid: a748f7e4c3221b71dacc8551b0f32a0a, type: 3}
   localizations: []

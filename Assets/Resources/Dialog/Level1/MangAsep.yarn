@@ -11,8 +11,8 @@ position: 35,-433
 
 <<if questStage("PulpenQuest", 3)>>
     Tarjo : Pagi, Mang Asep, Tarjo mau beli pulpen nihh.
-    Mang Asep : Boleh jo, harganya 3000 ya, jo. 
-    Tarjo : Okey mang, ini uang Tarjo 8000.
+    Mang Asep : Boleh jo, harganya 3 ribu ya, jo. 
+    Tarjo : Okey mang, ini uang Tarjo 5 Ribu.
     Mang Asep : Jadi kembali berapa ya jo?
     <<startMinigame Minigames4>>
     Tarjo : Terima kasih, Mang. Tarjo pergi sekolah dulu, yaa. 

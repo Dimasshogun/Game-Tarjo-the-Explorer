@@ -1,0 +1,24 @@
+{
+    "code": "SchoolQuest",
+    "name": "Sempai Sekolah",
+    "startingType": 1,
+    "stages": [{
+            "title": "Sampai di Sekolah",
+            "instruction": "Akhirnya juga di sekolah",
+            "status": 0,
+            "relatedNpc": "School"
+        },
+        {
+            "title": "Selesai",
+            "instruction": "yook masuk ke kelas",
+            "status": 2,
+            "relatedNpc": "School"
+        },
+        {
+            "title": "Selesai",
+            "instruction": "Kamu telah memperbaiki uang Alia",
+            "relatedNpc": "Alia",
+            "status": 3
+        }
+    ]
+}

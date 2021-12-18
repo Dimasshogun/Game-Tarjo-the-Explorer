@@ -1,0 +1,19 @@
+title: School
+tags: 
+colorID: 0
+position: 27,-442
+---
+<<if questStage("SchoolQuest", 2)>>
+    Tarjo : Akhirnya sampai juga disekolah ini
+    <<advanceQuestStage SchoolQuest 1>>
+    <<stop>>
+<<endif>>
+
+<<if questStage("SchoolQuest", 1)>>
+    Tarjo : yok saatnya masuk ke kelas
+    Alia : Ayok jo
+    <<startMinigame Minigames6>>
+<<advanceQuestStage SchoolQuest 1>>
+    <<stop>>
+<<endif>>
+===

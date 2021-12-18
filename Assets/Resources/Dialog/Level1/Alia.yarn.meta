@@ -8,13 +8,31 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
-  baseLanguageID: 
-  stringIDs: []
-  compilationStatus: 0
-  isSuccesfullyCompiled: 0
+  baseLanguageID: en-US
+  stringIDs:
+  - Alia-Alia-0
+  - Alia-Alia-1
+  - Alia-Alia-2
+  - Alia-Alia-3
+  - Alia-Alia-4
+  - Alia-Alia-5
+  - Alia-AliaQuest-6
+  - Alia-AliaQuest-7
+  - Alia-AliaQuest-8
+  - Alia-AliaQuest-9
+  - Alia-AliaQuest-10
+  - Alia-AliaQuest-11
+  - Alia-AliaQuest-12
+  - Alia-AliaQuest-13
+  - Alia-AliaQuest-14
+  - Alia-AliaQuest-15
+  - Alia-AliaQuest-16
+  - Alia-AliaQuest-17
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
   compilationErrorMessage: "Error on line 41 at position 76:\nmismatched input 'endif'
     expecting COMMAND_IF\n    Tarjo : Sama-sama, Alia. Aku duluan yaa, sampai ketemu
     di sekolah....<<endif>>\n                                                                          
     ^^^^^"
-  baseLanguage: {instanceID: 0}
+  baseLanguage: {fileID: 7128917941130120860, guid: 01754f8024780e91c8d186ae796dbc77, type: 3}
   localizations: []
