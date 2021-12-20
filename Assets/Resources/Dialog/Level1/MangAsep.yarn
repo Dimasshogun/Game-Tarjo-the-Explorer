@@ -1,7 +1,7 @@
 title: MangAsep
 tags: 
 colorID: 0
-position: 35,-433
+position: 463,218
 ---
 <<if questStage("PulpenQuest", 2)>>
     Tarjo : Sepertinya aku akan singgah untuk membeli pulpen
@@ -12,8 +12,8 @@ position: 35,-433
 <<if questStage("PulpenQuest", 3)>>
     Tarjo : Pagi, Mang Asep, Tarjo mau beli pulpen nihh.
     Mang Asep : Boleh jo, harganya 3 ribu ya, jo. 
-    Tarjo : Okey mang, ini uang Tarjo 5 Ribu.
-    Mang Asep : Jadi kembali berapa ya jo?
+    Tarjo : Okey Mang, ini uang Tarjo 5 Ribu.
+    Mang Asep : Jadi kembalinya berapa ya jo?
     <<startMinigame Minigames4>>
     Tarjo : Terima kasih, Mang. Tarjo pergi sekolah dulu, yaa. 
     <<advanceQuestStage PulpenQuest 4>>

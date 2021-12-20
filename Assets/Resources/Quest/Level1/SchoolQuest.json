@@ -4,20 +4,20 @@
     "startingType": 1,
     "stages": [{
             "title": "Sampai di Sekolah",
-            "instruction": "Akhirnya juga di sekolah",
+            "instruction": "Akhirnya sampai juga di sekolah",
             "status": 0,
             "relatedNpc": "School"
         },
         {
             "title": "Selesai",
             "instruction": "yook masuk ke kelas",
-            "status": 2,
+            "status": 1,
             "relatedNpc": "School"
         },
         {
             "title": "Selesai",
             "instruction": "Kamu telah memperbaiki uang Alia",
-            "relatedNpc": "Alia",
+            "relatedNpc": "School",
             "status": 3
         }
     ]

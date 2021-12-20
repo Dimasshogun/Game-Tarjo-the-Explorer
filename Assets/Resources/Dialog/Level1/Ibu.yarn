@@ -1,7 +1,7 @@
 title: IbuMinigame
 tags: 
 colorID: 0
-position: -69,-603
+position: -72,-604
 ---
 <<moveCharacter Tarjo Cutscene1Target2 teleport>>
 <<switchCamera Cutscene1Cam1 Cut>>
@@ -9,28 +9,29 @@ Di pagi yang begitu cerah, Tarjo akan segera pergi ke sekolah.
 <<moveCharacter Tarjo Cutscene1Target1 walk>>
 Tarjo: Bu tarjo pergi kesekolah dulu yah,
 
-Ibu: iya ini uang sakunya ya jo (ibu memberi uang 5 ribu)
+Ibu: Iya ini uang sakunya ya jo (Ibu memberi uang 5 ribu)
 
-Tarjo: ouh iyaa pulpen tarjo habis bu,.. beli pulpen baru ya bu? 
+Tarjo: Ouh iyaa pulpen Tarjo habis bu,.. Beli pulpen baru ya bu? 
 <<startQuest PulpenQuest>>
 
-Ibu: boleh, kalau gitu ambil uang 5 ribu di meja kamar ibu yaa.
+Ibu: Boleh, kalau begitu ambil uang 5 ribu di meja kamar Ibu yaa.
 <<advanceQuestStage PulpenQuest 1>>
 
-Tarjo: baik ibuu (Tarjo pergi ke meja di kamar ibu)
+Tarjo: Baik Ibuu (Tarjo pergi ke meja di kamar Ibu)
 <<moveCharacter Tarjo Cutscene1Target2 walk>>
 
-uang manakah yang akan Tarjo ambil? (Tarjo memperhatikan uang satu-persatu)
+Uang manakah yang akan Tarjo ambil? (Tarjo memperhatikan uang satu-persatu)
 <<startMinigame Minigames1>>
 
 <<moveCharacter Tarjo Cutscene1Target1 walk>>
-Tarjo: Sudah bu, tarjo berangkat yaaaaaa!!
+Tarjo: Sudah bu, Tarjo berangkat yaaaaaa
 Ibu : Hati-hati di jalan, Tarjo. Jadi anak pintar, ya.
-Tarjo: Pasti, buu. Baayyy
+Tarjo: Pasti, buu. Sampai jumpa Bu.
+Ibu : Iya jo.
 
 <<moveCharacter Tarjo Cutscene1Target3 walk>>
 <<switchCamera Cutscene1Cam2 EaseIn>>
-Tarjo: Hari ini uangku lebih banyak dari biasanya. ini uang pertama 5 ribu, dan ini uang kedua 5 ribu. Jadi jumlah uangku berapa ya?
+Tarjo: Hari ini uangku lebih banyak dari biasanya, ini uang pertama 5 ribu dan uang kedua 5 ribu. Jadi jumlah uangku berapa ya?
 <<startMinigame Minigames2>>
 Tarjo : YAPP!! Aku memang anak pintarr! Ayo lanjut jalann..
 Tarjo : Lalala lalalaa..

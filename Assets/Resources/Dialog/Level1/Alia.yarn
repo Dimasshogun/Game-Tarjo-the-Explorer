@@ -4,40 +4,41 @@ colorID: 8
 position: 217,-87
 ---
 <<if questStage("AliaQuest", 0)>>
-    Alia : Huhuhuhuuuu
+    Alia : Huhuhuhuuuu (Menangis)
     Tarjo : Halo, Alia?
-    Alia : Uuhuhuhuuu
+    Alia : Uuhuhuhuuu (Menangis)
     -> Alia nangis? kamu kenapa?
         [[AliaQuest]]
 <<endif>>
 <<if questStage("AliaQuest", 2)>>
-    Alia: Terimakasih telah membantu aku Tarjo :D
+    Alia: Terimakasih telah membantu aku Tarjo
 <<endif>>
 -> Dadah
 ===
 title: AliaQuest
 tags: 
 colorID: 0
-position: 481,-99
+position: 479,-100
 ---
 <<if questStage("AliaQuest", 0)>>
-    Alia: Huhuuu aku disuruh ayah beli sarapan, tapi barusan aku mainin uangku trus nggak sengaja uangku sobek. Aku nggak bisa beli nasi, Ayah pasti marah-marah.
-    Tarjo: yaah, sobek. coba liat uangnya?
-    Alia: Ini uangku, 20 ribu buat beli 2 nasi bungkus” (alia menunjukkan uangnya yang terbelah menjadi 2)
-    Tarjo: Hemm.. (bergumam)
+    Alia: Huhuuu aku disuruh Ayah beli sarapan, tapi barusan aku mainin uangku terus tidak sengaja uangku sobek. Aku tidak bisa beli nasi, Ayah pasti marah sama Alia jo.
+    Tarjo: Yaah, sobek. Coba liat uangnya?
+    Alia: Ini uangku, 20 ribu buat beli 2 nasi bungkus” (Alia menunjukkan uangnya yang terbelah menjadi 2)
+    Tarjo: Hemm.. (Berfikir)
     <<advanceQuestStage AliaQuest 1>>
 <<endif>>
 
 <<if questStage("AliaQuest", 1)>>
 -> Bagaimana cara aku menolong Alia ya?
-    Tarjo: Kalo uangku banyak, kamu bisa pake uangku dulu, tapi uangku cuma 5 ribu. 
+    Tarjo: Kalau uangku banyak, kamu bisa pake uangku dulu, tapi uangku cuma 10 ribu. 
     Alia: Tolong aku ya Joo..
     Tarjo: Oh iya, tapi kayaknya aku punya lem kertas. Kita coba lem deh.
     (Membuka tas. User diminta untuk mencari lem kertas)
     Tarjo: Hemm, yang manakah lem kertas?
     <<startMinigame Minigames5>>
     <<advanceQuestStage AliaQuest 2>>
-    Alia : Waah, terima kasih, Tarjo
-    Tarjo : Sama-sama, Alia. Aku duluan yaa, sampai ketemu di sekolah....
+    Alia : Waah, terima kasi banyak Tarjo.
+    Tarjo : Sama-sama Alia. Aku duluan yaa, sampai ketemu di sekolah....
+    Alia : Baik Jo.
 <<endif>>
 ===
