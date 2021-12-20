@@ -1,4 +1,5 @@
-using Cinemachine;
+using System.Collections;
+using Code.Scripts.Control;
 using Code.Scripts.NPC;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -18,7 +19,7 @@ namespace Code.Scripts.Character
         private void Awake() 
         {
             dialogueRunner = FindObjectOfType<DialogueRunner>();
-            interactButton.onClick.AddListener(StartDialog);
+            interactButton.onClick.AddListener(() => StartCoroutine(StartDialog()));
         }
         
         private void Update()
@@ -26,13 +27,20 @@ namespace Code.Scripts.Character
             Keyboard kb = InputSystem.GetDevice<Keyboard>();
             if (kb.spaceKey.wasPressedThisFrame)
             {
-                StartDialog();
+                StartCoroutine(StartDialog());
             }
         }
 
         private void OnEnable()
         {
-            interactButton.gameObject.SetActive(true);
+            if (_targetNpc != null && dialogueRunner.NodeExists(_targetNpc.entryNode))
+            {
+                interactButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                enabled = false;
+            }
         }
         
         private void OnDisable()
@@ -40,14 +48,17 @@ namespace Code.Scripts.Character
             interactButton.gameObject.SetActive(false);
         }
 
-        public void StartDialog()
+        private IEnumerator StartDialog()
         {
             if (!_onDialogue)
             {
-                Cursor.lockState = CursorLockMode.None;
                 dialogueRunner.StartDialogue(_targetNpc.entryNode);
                 ToggleOnDialogue(true);
             }
+
+            yield return new WaitUntil(() => !dialogueRunner.IsDialogueRunning);
+            
+            ToggleOnDialogue(false);
         }
 
         public void SetTargetNpc(GameObject npc)
@@ -58,18 +69,15 @@ namespace Code.Scripts.Character
         public void ToggleOnDialogue(bool onDialogue)
         {
             _onDialogue = onDialogue;
-            // temporary usage
-            GetComponent<Movement>().enabled = !onDialogue;
+            GetComponent<MovementInputHandler>().enabled = !onDialogue;
 
             if (onDialogue)
             {
-                Cursor.lockState = CursorLockMode.None;
                 var targetNpcCam = _targetNpc.gameObject.GetComponentInChildren<CameraInstance>();
                 StartCoroutine(CameraManager.Instance.SwitchVirtualCam(targetNpcCam));
             }
             else
             {
-                Cursor.lockState = CursorLockMode.Locked;
                 CameraManager.Instance.SwitchToPlayerCam();
             }
         }

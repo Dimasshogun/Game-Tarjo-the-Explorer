@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Cinemachine;
 using Code.Scripts.Character;
+using Code.Scripts.Control;
 using UnityEngine;
 using Yarn.Unity;
 
@@ -27,7 +28,7 @@ namespace Code.Scripts.Quest
         {
             var questStage = QuestManager.Instance.GetQuestStage(questCode);
             var npcCamera = GameObject.Find(questStage.relatedNpc).GetComponentInChildren<CameraInstance>();
-            var playerMovement = GameObject.FindWithTag("Player").GetComponent<Movement>();
+            var playerMovement = GameObject.FindWithTag("Player").GetComponent<MovementInputHandler>();
             var dialogueRunner = FindObjectOfType<DialogueRunner>();
 
             playerMovement.enabled = false;

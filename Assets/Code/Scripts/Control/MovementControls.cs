@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Code/Scripts/Character/MovementControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Code/Scripts/Control/MovementControls.inputactions'
 
 using System;
 using System.Collections;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-namespace Code.Scripts.Character
+namespace Code.Scripts.Control
 {
     public class @MovementControls : IInputActionCollection, IDisposable
     {
