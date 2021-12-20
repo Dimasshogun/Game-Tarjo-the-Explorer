@@ -40,11 +40,13 @@ namespace Code.Scripts.Control
         private void FixedUpdate()
         {
             Command.Command moveCommand = HandlePlayerMovement();
-            if (moveCommand != null)
+            if (moveCommand == null)
             {
-                commands.Enqueue(moveCommand);
-                moveCommand.Execute();
+                return;
             }
+
+            commands.Enqueue(moveCommand);
+            moveCommand.Execute();
         }
 
         private Command.Command HandlePlayerMovement()
@@ -52,7 +54,7 @@ namespace Code.Scripts.Control
             var inputDirection = _controls.Player.Movement.ReadValue<Vector2>();
             if (inputDirection.x == 0f && inputDirection.y == 0f)
             {
-                return null;
+                return new MoveInput(_playerMovement, player.transform.position, inputDirection);
             }
 
             var right = _mainCameraTransform.right;
