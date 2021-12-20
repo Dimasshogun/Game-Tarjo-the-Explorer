@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9c8cb4c3002f3497d917a39f3151710e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - BridgeQuest-BridgeQuest-0
+  - BridgeQuest-BridgeQuest-1
+  - BridgeQuest-BridgeQuest-2
+  - BridgeQuest-BridgeQuest-3
+  - BridgeQuest-BridgeQuest-4
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
