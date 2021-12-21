@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Code.Scripts.Quest
 {
@@ -13,7 +14,6 @@ namespace Code.Scripts.Quest
         public QuestStatus status;
     }
 
-    [Serializable]
     public enum QuestStatus
     {
         Inactive,
@@ -29,14 +29,16 @@ namespace Code.Scripts.Quest
         Triggered
     }
     
-    [Serializable]
-    public class QuestData
+    [CreateAssetMenu(fileName = "QuestData", menuName = "Project/Quest Data", order = 0)]
+    public class QuestData: ScriptableObject
     {
-        public string code;
-        public string name;
-        public QuestStartingType startingType;
-        public QuestStatus status = QuestStatus.Inactive;
-        public int currentStage = 0;
-        public List<QuestStage> stages;
+        [SerializeField] private string questCode;
+        [SerializeField] private string questName;
+        [SerializeField] private QuestStartingType startingType;
+        [SerializeField] private List<QuestStage> stages;
+
+        public string QuestCode => questCode;
+        public QuestStartingType StartingType => startingType;
+        public List<QuestStage> Stages => stages;
     }
 }

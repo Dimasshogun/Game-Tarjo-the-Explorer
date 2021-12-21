@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Code.Scripts.NPC;
+using Code.Scripts.SaveSystem;
 using UnityEngine;
 using UnityEngine.Events;
 using Yarn.Unity;
@@ -28,27 +29,22 @@ namespace Code.Scripts.Quest
         }
         
         [SerializeField] private DialogueRunner dialogueRunner;
-        [SerializeField] private string[] questFiles;
         public List<QuestData> quests = new List<QuestData>();
 
+        private GameManager _gameManager;
         private Queue<QuestStage> _updateNpcQueue = new Queue<QuestStage>();
 
         public UnityAction<QuestStage> UpdateNpc = delegate {  };
 
         private void Start()
         {
-            foreach (var questFile in questFiles)
+            _gameManager = GameManager.Instance;
+            foreach (var quest in quests)
             {
-                var questJson = Resources.Load<TextAsset>($"Quest/{questFile}");
-                if (questJson != null)
+                _gameManager.levelProgress.quests.Add(new QuestProgress(){questCode = quest.QuestCode, currentStage = 0});
+                if (quest.StartingType == QuestStartingType.Instant)
                 {
-                    var npcQuest = JsonUtility.FromJson<QuestData>(questJson.ToString());
-                    quests.Add(npcQuest);
-                    
-                    if (npcQuest.startingType == QuestStartingType.Instant)
-                    {
-                        StartQuest(new[] {npcQuest.code});
-                    }
+                    StartQuest(new[] {quest.QuestCode});
                 }
             }
             
@@ -64,7 +60,7 @@ namespace Code.Scripts.Quest
             {
                 var questCode = parameters[0].AsString;
                 var stageIndex =  (int)parameters[1].AsNumber;
-                var quest = quests.Find(quest => quest.code == questCode);
+                var quest = _gameManager.levelProgress.quests.Find(quest => quest.questCode == questCode);
                 return quest.currentStage == stageIndex;
             });
         }
@@ -73,11 +69,11 @@ namespace Code.Scripts.Quest
         {
             var questCode = parameters[0];
             
-            var quest = quests.Find(quest => quest.code == questCode);
-            quest.status = quest.stages[quest.currentStage].status;
-            _updateNpcQueue.Enqueue(quest.stages[quest.currentStage]);
+            var quest = quests.Find(quest => quest.QuestCode == questCode);
+            var currentQuestStage = _gameManager.levelProgress.quests.Find(q => q.questCode == questCode).currentStage;
+            _updateNpcQueue.Enqueue(quest.Stages[currentQuestStage]);
             
-            QuestNotification.Instance.ShowNotification(quest.stages[quest.currentStage]);
+            QuestNotification.Instance.ShowNotification(quest.Stages[currentQuestStage]);
         }
 
         public void AdvanceQuestStage(string[] parameters)
@@ -85,24 +81,25 @@ namespace Code.Scripts.Quest
             var questCode = parameters[0];
             var stage = int.Parse(parameters[1]);
             
-            var quest = quests.Find(quest => quest.code == questCode);
-            quest.currentStage = stage;
-            quest.status = quest.stages[quest.currentStage].status;
-            _updateNpcQueue.Enqueue(quest.stages[quest.currentStage]);
+            var quest = quests.Find(quest => quest.QuestCode == questCode);
+            var updatedQuestStage = _gameManager.UpdateQuestStage(questCode, stage);
+            _updateNpcQueue.Enqueue(quest.Stages[updatedQuestStage]);
             
-            QuestNotification.Instance.ShowNotification(quest.stages[quest.currentStage]);
+            QuestNotification.Instance.ShowNotification(quest.Stages[updatedQuestStage]);
         }
 
         public QuestStage GetQuestStage(string questCode)
         {
-            var quest = quests.Find(quest => quest.code == questCode);
-            return quest.stages[quest.currentStage];
+            var quest = quests.Find(quest => quest.QuestCode == questCode);
+            var currentQuestStage = _gameManager.GetQuestStage(questCode);
+            return quest.Stages[currentQuestStage];
         }
         
         public string GetQuestNpc(string questCode)
         {
-            var quest = quests.Find(quest => quest.code == questCode);
-            return quest.stages[quest.currentStage].relatedNpc;
+            var quest = quests.Find(quest => quest.QuestCode == questCode);
+            var currentQuestStage = _gameManager.GetQuestStage(questCode);
+            return quest.Stages[currentQuestStage].relatedNpc;
         }
 
         public void RunNpcUpdate()
