@@ -53,6 +53,11 @@ namespace Code.Scripts.Minigame
             {
                 dropTargets.AddRange(FindObjectsOfType<MinigameDropTarget>());
             }
+            if (dropTargets.Count == 0)
+            {
+                endScreen.SetActive(true);
+                return; 
+            }
             endScreen.SetActive(false);
         }
 

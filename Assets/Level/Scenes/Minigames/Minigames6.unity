@@ -310,7 +310,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 750410802}
         m_TargetAssemblyTypeName: Code.Scripts.SceneLoader, Assembly-CSharp
-        m_MethodName: StartLoadLevel
+        m_MethodName: StartChangeScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

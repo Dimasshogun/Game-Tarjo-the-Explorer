@@ -10,7 +10,8 @@ namespace Code.Scripts.Character
         [SerializeField] private GameObject gameplayUI;
         private Rigidbody _rigidbody;
         private Animator _modelAnimator;
-    
+        private AudioSource _audioSource;
+
         [SerializeField] private float baseSpeed = 10f;
         private float _speed;
         private Transform _mainCameraTransform;
@@ -23,6 +24,7 @@ namespace Code.Scripts.Character
         private void Awake()
         {
             _controls = new MovementControls();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         private void Start()
@@ -47,12 +49,18 @@ namespace Code.Scripts.Character
                 _modelAnimator.SetFloat(XDirection, inputDirection.x);
                 _modelAnimator.SetFloat(YDirection, inputDirection.y);
                 _modelAnimator.SetBool(IsWalking, true);
+                if(!_audioSource.isPlaying){
+                    _audioSource.Play();
+                }
             }
             else
             {
                 if (_modelAnimator.GetBool(IsWalking))
                 {
                     _modelAnimator.SetBool(IsWalking, false);
+                }
+                if(_audioSource.isPlaying){
+                    _audioSource.Stop();
                 }
             }
         }
