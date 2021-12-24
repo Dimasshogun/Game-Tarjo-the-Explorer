@@ -1,3 +1,4 @@
+using Code.Scripts.Quest;
 using Code.Scripts.SaveSystem;
 using UnityEngine;
 
@@ -22,22 +23,36 @@ namespace Code.Scripts
             }
         }
 
-        public LevelProgress levelProgress = new LevelProgress();
+        public LevelProgress levelProgress;
 
-        public int UpdateQuestStage(string questCode, int stage)
-        {
-            var quest = levelProgress.quests.Find(q => q.questCode == questCode);
-            quest.currentStage = stage;
-
-            Debug.Log(levelProgress.quests.Find(q => q.questCode == questCode).currentStage);
-
-            return quest.currentStage;
-        }
-
-        public int GetQuestStage(string questCode)
-        {
-            return levelProgress.quests.Find(q => q.questCode == questCode).currentStage;
-        }
+        private GameObject _player;
         
+        private void Start()
+        {
+            _player = GameObject.FindWithTag("Player");
+            
+            levelProgress = SaveDataManager.LoadLevelProgress();
+            if (levelProgress.playerPos != Vector3.zero)
+            {
+                _player.transform.position = levelProgress.playerPos;
+            }
+
+            if (levelProgress.quests.Count != 0)
+            {
+                return;
+            }
+
+            var quests = QuestManager.Instance.quests;
+            foreach (var quest in quests)
+            {
+                levelProgress.quests.Add(new QuestProgress {questCode = quest.QuestCode, currentStage = 0});
+            }
+        }
+
+        public void SaveProgress()
+        {
+            levelProgress.playerPos = _player.transform.position;
+            SaveDataManager.SaveLevelProgress(levelProgress);
+        }
     }
 }

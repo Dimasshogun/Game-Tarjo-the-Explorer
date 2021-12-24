@@ -41,7 +41,6 @@ namespace Code.Scripts.Quest
             _gameManager = GameManager.Instance;
             foreach (var quest in quests)
             {
-                _gameManager.levelProgress.quests.Add(new QuestProgress(){questCode = quest.QuestCode, currentStage = 0});
                 if (quest.StartingType == QuestStartingType.Instant)
                 {
                     StartQuest(new[] {quest.QuestCode});
@@ -82,23 +81,24 @@ namespace Code.Scripts.Quest
             var stage = int.Parse(parameters[1]);
             
             var quest = quests.Find(quest => quest.QuestCode == questCode);
-            var updatedQuestStage = _gameManager.UpdateQuestStage(questCode, stage);
+            var updatedQuestStage = _gameManager.levelProgress.UpdateQuestStage(questCode, stage);
             _updateNpcQueue.Enqueue(quest.Stages[updatedQuestStage]);
             
             QuestNotification.Instance.ShowNotification(quest.Stages[updatedQuestStage]);
+            _gameManager.SaveProgress();
         }
 
         public QuestStage GetQuestStage(string questCode)
         {
             var quest = quests.Find(quest => quest.QuestCode == questCode);
-            var currentQuestStage = _gameManager.GetQuestStage(questCode);
+            var currentQuestStage = _gameManager.levelProgress.GetQuestStage(questCode);
             return quest.Stages[currentQuestStage];
         }
         
         public string GetQuestNpc(string questCode)
         {
             var quest = quests.Find(quest => quest.QuestCode == questCode);
-            var currentQuestStage = _gameManager.GetQuestStage(questCode);
+            var currentQuestStage = _gameManager.levelProgress.GetQuestStage(questCode);
             return quest.Stages[currentQuestStage].relatedNpc;
         }
 
