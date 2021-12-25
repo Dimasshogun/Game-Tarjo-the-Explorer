@@ -1,9 +1,39 @@
 fileFormatVersion: 2
-guid: caf6366f2218b1fd48f00fcd6a6688b4
+guid: ed361f7da1d25934f9f32a3a2b5ffce4
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: genteng
+    second: {fileID: 2800000, guid: 3fe9ec537674e974e83d7611d5392dbe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: pagar
+    second: {fileID: 2800000, guid: d5301bd4916a4d54dafc179e19da5968, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: pagar_tembok
+    second: {fileID: 2800000, guid: 99b2fa3107c7bab43b96bbfdafc2c18f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: papingblok
+    second: {fileID: 2800000, guid: f27ac2f81fd29a64f8375cfc1bd74880, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: sekolah
+    second: {fileID: 2800000, guid: a6ab1571806fa7549951d6b3c0bd1387, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tiang
+    second: {fileID: 2800000, guid: 7c0cd6907b7e7d24d95654bd145e4cce, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

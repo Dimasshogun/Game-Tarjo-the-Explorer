@@ -7,9 +7,15 @@ namespace Code.Scripts.Minigame
 {
     public class MinigameController : MonoBehaviour
     {
+        [SerializeField] private GameObject dialogueUI;
+        
         private void Start()
         {
             FindObjectOfType<DialogueRunner>().AddCommandHandler("startMinigame", StartMinigame);
+            if (dialogueUI == null)
+            {
+                dialogueUI = GameObject.Find("DialogueUI");
+            }
         }
 
         public void StartMinigame(string[] parameters, System.Action onComplete)
@@ -21,7 +27,6 @@ namespace Code.Scripts.Minigame
         
         public IEnumerator PlayMinigame(string minigameScene, System.Action onComplete)
         {
-            var dialogueUI = GameObject.Find("DialogueUI");
             dialogueUI.SetActive(false);
             
             SceneManager.LoadSceneAsync(minigameScene, LoadSceneMode.Additive);
