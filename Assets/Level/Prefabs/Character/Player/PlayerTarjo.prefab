@@ -243,6 +243,19 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1304976927}
+--- !u!114 &714714980126885497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5400965432732883804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f0bab2dff24e53926cc801708f45a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7737077859225117456}
 --- !u!1001 &5849059926975186232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -360,7 +373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2006384908324380260, guid: 01095a263f973c1e7b318467f799d83d, type: 3}
       propertyPath: m_Name
-      value: Tarjo
+      value: PlayerTarjo
       objectReference: {fileID: 0}
     - target: {fileID: 2006384908324380261, guid: 01095a263f973c1e7b318467f799d83d, type: 3}
       propertyPath: gameplayUI
@@ -524,8 +537,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01095a263f973c1e7b318467f799d83d, type: 3}
+--- !u!1 &5400965432732883804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2006384908324380260, guid: 01095a263f973c1e7b318467f799d83d, type: 3}
+  m_PrefabInstance: {fileID: 5849059926975186232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5400965432732883802 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2006384908324380258, guid: 01095a263f973c1e7b318467f799d83d, type: 3}
+  m_PrefabInstance: {fileID: 5849059926975186232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7737077859225117456 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4211875357197018664, guid: 01095a263f973c1e7b318467f799d83d, type: 3}
   m_PrefabInstance: {fileID: 5849059926975186232}
   m_PrefabAsset: {fileID: 0}

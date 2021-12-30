@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 namespace Code.Scripts.Character
 {
@@ -31,6 +32,19 @@ namespace Code.Scripts.Character
         private void Start()
         {
             characterInstances.AddRange(FindObjectsOfType<CharacterInstance>());
+            
+            FindObjectOfType<DialogueRunner>().AddCommandHandler("AnimateCharacter", AnimateCharacter);
+        }
+
+        private void AnimateCharacter(string[] parameters)
+        {
+            var characterName = parameters[0];
+            var animationType = parameters[1];
+
+            bool isIdleUpdated = parameters.Length >= 3;
+
+            var character = characterInstances.Find(c => c.characterName == characterName);
+            character.characterAnimator.AnimateCharacter(animationType, isIdleUpdated);
         }
     }
 }
