@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Code.Scripts.Control;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Yarn.Unity;
@@ -10,8 +11,17 @@ namespace Code.Scripts.Cutscene
     {
         [SerializeField] private string scene;
         [SerializeField] private string dialogueNode;
+        [SerializeField] private MovementInputHandler playerMovement;
 
         private bool _triggered;
+
+        private void Start()
+        {
+            if (playerMovement == null)
+            {
+                playerMovement = GameObject.FindWithTag("Player").GetComponent<MovementInputHandler>();
+            }
+        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -24,6 +34,7 @@ namespace Code.Scripts.Cutscene
 
         private IEnumerator PlayCutscene()
         {
+            playerMovement.enabled = false;
             if (!SceneManager.GetSceneByName(scene).isLoaded)
             {
                 SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
@@ -40,9 +51,9 @@ namespace Code.Scripts.Cutscene
             }
             
             yield return new WaitUntil(() => !dialogueRunner.IsDialogueRunning);
-            Debug.Log("dialogue end");
 
             SceneManager.UnloadSceneAsync(scene);
+            playerMovement.enabled = true;
         }
     }
 }

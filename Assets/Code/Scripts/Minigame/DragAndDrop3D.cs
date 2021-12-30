@@ -46,8 +46,6 @@ namespace Code.Scripts.Minigame
                 return;
             }
 
-            Debug.Log(hit.collider.name);
-
             if (hit.collider != null && hit.collider.gameObject.CompareTag("Draggable"))
             {
                 StartCoroutine(DragUpdateTouch(hit.collider.gameObject));

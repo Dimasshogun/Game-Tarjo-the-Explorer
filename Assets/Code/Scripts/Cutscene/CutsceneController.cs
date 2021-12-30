@@ -1,5 +1,6 @@
 using System.Collections;
 using Cinemachine;
+using Code.Scripts.Character;
 using UnityEngine;
 using Yarn.Unity;
 
@@ -50,7 +51,7 @@ namespace Code.Scripts.Cutscene
             var targetName = parameters[1];
             var moveOption = parameters[2];
 
-            var character = GameObject.Find(characterName);
+            var character = CharacterManager.Instance.characterInstances.Find(c => c.characterName == characterName).gameObject;
             var targetTransform = GameObject.Find(targetName).GetComponent<Transform>();
 
             StartCoroutine(moveOption == "teleport"
@@ -70,11 +71,20 @@ namespace Code.Scripts.Cutscene
 
         public IEnumerator MoveCharacter(GameObject character, Transform targetTransform, System.Action onComplete)
         {
+            var characterMovement = character.GetComponent<Movement>();
+            var targetPosition = targetTransform.position;
+            var mainCameraTransform = Camera.main.transform;
+            
             while (Vector3.Distance(character.transform.position, targetTransform.position) > 0.2f)
             {
-                character.transform.position = Vector3.MoveTowards(character.transform.position, targetTransform.position, 0.5f);
+                var characterPosition = character.transform.position;
+                characterMovement.Move(
+                    Vector3.MoveTowards(characterPosition, targetPosition, 0.2f), 
+                    (targetPosition - characterPosition - mainCameraTransform.position).normalized);
                 yield return null;
             }
+            characterMovement.Move(character.transform.position, Vector2.zero);
+            
             onComplete();
         }
     }
