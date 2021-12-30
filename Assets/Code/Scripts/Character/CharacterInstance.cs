@@ -10,6 +10,8 @@ namespace Code.Scripts.Character
 
         public CharacterAnimator characterAnimator;
 
+        private CharacterManager _characterManager;
+
         private void Start()
         {
             if (characterName == "")
@@ -20,6 +22,18 @@ namespace Code.Scripts.Character
             {
                 characterAnimator = GetComponent<CharacterAnimator>();
             }
+
+            _characterManager = FindObjectOfType<CharacterManager>();
+            var dupe = _characterManager.characterInstances.Find(c => c.characterName == characterName);
+            if (dupe == null)
+            {
+                _characterManager.characterInstances.Add(this);
+            }
+        }
+
+        private void OnDestroy()
+        {
+            _characterManager.characterInstances.Remove(this);
         }
     }
 }

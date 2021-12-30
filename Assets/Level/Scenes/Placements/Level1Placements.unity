@@ -212,6 +212,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7704844272636657677, guid: 315fb1120e5008e7eafccb5a2b08daf6, type: 3}
+      propertyPath: characterName
+      value: MangAsep
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704844272636657677, guid: 315fb1120e5008e7eafccb5a2b08daf6, type: 3}
+      propertyPath: characterAnimator
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 315fb1120e5008e7eafccb5a2b08daf6, type: 3}
 --- !u!4 &240256623 stripped
@@ -2456,6 +2464,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.x
       value: 0.060823053
       objectReference: {fileID: 0}
+    - target: {fileID: 8576428504192155752, guid: 86ceb534dcbc0b2df9037b618381049b, type: 3}
+      propertyPath: idleState
+      value: Smile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86ceb534dcbc0b2df9037b618381049b, type: 3}
 --- !u!23 &8099416793357052472
@@ -2593,11 +2605,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8856488771689894012, guid: cb81401bdbd811aa99fcab404262c9c5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.060823012
+      value: -0.060823016
       objectReference: {fileID: 0}
     - target: {fileID: 8856488771689894012, guid: cb81401bdbd811aa99fcab404262c9c5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.005652906
+      value: 0.0056529064
       objectReference: {fileID: 0}
     - target: {fileID: 8856488772662075530, guid: cb81401bdbd811aa99fcab404262c9c5, type: 3}
       propertyPath: m_RootOrder
