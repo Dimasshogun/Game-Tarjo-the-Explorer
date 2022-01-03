@@ -13,10 +13,10 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: xDirection
-    m_EventTreshold: 0.5
+    m_EventTreshold: 0.3
   - m_ConditionMode: 3
     m_ConditionEvent: yDirection
-    m_EventTreshold: 0.1
+    m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5328426237192587314}
   m_Solo: 0
@@ -70,10 +70,10 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: xDirection
-    m_EventTreshold: -0.5
+    m_EventTreshold: -0.3
   - m_ConditionMode: 4
     m_ConditionEvent: yDirection
-    m_EventTreshold: -0.1
+    m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2155015449374838671}
   m_Solo: 0
@@ -127,10 +127,10 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: xDirection
-    m_EventTreshold: -0.5
+    m_EventTreshold: -0.3
   - m_ConditionMode: 3
     m_ConditionEvent: yDirection
-    m_EventTreshold: 0.1
+    m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5139456061890581160}
   m_Solo: 0
@@ -378,10 +378,10 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: xDirection
-    m_EventTreshold: -0.1
+    m_EventTreshold: -0.01
   - m_ConditionMode: 4
     m_ConditionEvent: xDirection
-    m_EventTreshold: 0.1
+    m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2218700086345062905}
   m_Solo: 0
@@ -412,10 +412,10 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: xDirection
-    m_EventTreshold: -0.1
+    m_EventTreshold: -0.01
   - m_ConditionMode: 4
     m_ConditionEvent: xDirection
-    m_EventTreshold: 0.1
+    m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1617261426358618534}
   m_Solo: 0
@@ -468,10 +468,10 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: xDirection
-    m_EventTreshold: 0.5
+    m_EventTreshold: 0.3
   - m_ConditionMode: 4
     m_ConditionEvent: yDirection
-    m_EventTreshold: -0.1
+    m_EventTreshold: -0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8402078662932155245}
   m_Solo: 0

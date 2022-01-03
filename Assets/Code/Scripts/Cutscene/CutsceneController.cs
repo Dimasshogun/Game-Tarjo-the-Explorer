@@ -78,12 +78,28 @@ namespace Code.Scripts.Cutscene
             while (Vector3.Distance(character.transform.position, targetTransform.position) > 0.2f)
             {
                 var characterPosition = character.transform.position;
-                characterMovement.Move(
-                    Vector3.MoveTowards(characterPosition, targetPosition, 0.2f), 
-                    (targetPosition - characterPosition - mainCameraTransform.position).normalized);
+                if (characterMovement != null)
+                {
+                   var animTarget = (targetPosition - characterPosition).normalized;
+                   
+                   var animDirection = mainCameraTransform.forward * animTarget.z +
+                                       mainCameraTransform.right * animTarget.x;
+
+                   characterMovement.Move(
+                        Vector3.MoveTowards(characterPosition, targetPosition, 0.2f), 
+                        new Vector2(animDirection.z, -animDirection.x));
+                }
+                else
+                {
+                    character.transform.position = Vector3.MoveTowards(characterPosition, targetPosition, 0.2f);
+                }
                 yield return null;
             }
-            characterMovement.Move(character.transform.position, Vector2.zero);
+
+            if (characterMovement != null)
+            {
+                characterMovement.Move(character.transform.position, Vector2.zero);
+            }
             
             onComplete();
         }
