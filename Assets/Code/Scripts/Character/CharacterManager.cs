@@ -31,8 +31,6 @@ namespace Code.Scripts.Character
 
         private void Start()
         {
-            characterInstances.AddRange(FindObjectsOfType<CharacterInstance>());
-            
             FindObjectOfType<DialogueRunner>().AddCommandHandler("AnimateCharacter", AnimateCharacter);
         }
 
