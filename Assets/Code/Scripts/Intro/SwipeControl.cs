@@ -8,11 +8,16 @@ public class SwipeControl : MonoBehaviour
     public GameObject scrollbar; //biar bisa akses value dari scrol bar
     float scroll_pos = 0;
     float[] pos; //butuh array untuk menyimpan posisinya dari tiap2 object
-    int posisi = 0; //navigasi posisi kanan kiri
+    int posisi = 0; //navigasi posisi kanan kiri\
+
+    public GameObject buttonLanjutkan;
+    public GameObject buttonKiri;
 
     // Start is called before the first frame update
     void Start()
     {
+        buttonLanjutkan.SetActive(false);
+        buttonKiri.SetActive(false);
 
     }
 
@@ -23,6 +28,10 @@ public class SwipeControl : MonoBehaviour
             posisi += 1;
             scroll_pos = pos[posisi];
         }
+        if (posisi == pos.Length -1){
+            buttonLanjutkan.SetActive(true);
+            buttonKiri.SetActive(true);
+        }
     }
 
     // untuk tombol previous atau sebelumnya
@@ -31,6 +40,7 @@ public class SwipeControl : MonoBehaviour
         if (posisi > 0){
             posisi -= 1;
             scroll_pos = pos[posisi];
+            
         }
     }
 
