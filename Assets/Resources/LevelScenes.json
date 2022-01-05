@@ -3,6 +3,10 @@
     {
       "rootScene": "Level1",
       "additionalScenes": ["MapLayout4", "Level1Placements"]
+    },
+    {
+      "rootScene": "Level1B",
+      "additionalScenes": ["MapLayoutB", "Level1BPlacements"]
     }
   ]
 }
