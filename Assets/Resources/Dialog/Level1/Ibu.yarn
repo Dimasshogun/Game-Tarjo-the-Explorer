@@ -3,6 +3,7 @@ tags:
 colorID: 0
 position: -72,-604
 ---
+<<AnimateCharacter Ibu Smile>>
 <<moveCharacter Tarjo Cutscene1Target2 teleport>>
 <<switchCamera Cutscene1Cam1 Cut>>
 Di pagi yang begitu cerah, Tarjo akan segera pergi ke sekolah. 
@@ -26,6 +27,7 @@ Uang manakah yang akan Tarjo ambil? (Tarjo memperhatikan uang satu-persatu)
 <<moveCharacter Tarjo Cutscene1Target1 walk>>
 Tarjo: Sudah bu, Tarjo berangkat yaaaaaa
 Ibu : Hati-hati di jalan, Tarjo. Jadi anak pintar, ya.
+<<AnimateCharacter Ibu Wave>>
 Tarjo: Pasti, buu. Sampai jumpa Bu.
 Ibu : Iya jo.
 
@@ -38,6 +40,7 @@ Tarjo : Lalala lalalaa..
 
 <<advanceQuestStage PulpenQuest 2>>
 <<switchToPlayerCamera>>
+<<AnimateCharacter Ibu Smile>>
 ===
 title: Ibu
 tags: 

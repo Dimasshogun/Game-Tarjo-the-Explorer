@@ -2,7 +2,7 @@
   "levelSetups": [
     {
       "rootScene": "Level1",
-      "additionalScenes": ["MapLayout4"]
+      "additionalScenes": ["MapLayout4", "Level1Placements"]
     }
   ]
 }

@@ -1,0 +1,584 @@
+fileFormatVersion: 2
+guid: d5ec78600f93e2949b70436f12a229ff
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: mata sedih
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1753
+      y: 475
+      width: 203
+      height: 18
+    spriteID: 924584644b1b1da42b287afb46855658
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1118, y: -847}
+  - name: mata senang
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1753
+      y: 501
+      width: 203
+      height: 18
+    spriteID: 169d6e0d9c0ef0342a26b57f41df8bfc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1118, y: -816}
+  - name: mata buka
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1603
+      y: 542
+      width: 174
+      height: 65
+    spriteID: b5dd9e1f5290e1048a24e00d2d5ce8ec
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 953, y: -759}
+  - name: pipi
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1460
+      y: 475
+      width: 285
+      height: 37
+    spriteID: e06e0a9b2b05dfe4fb9fc9d19de9e3a0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 866, y: -766}
+  - name: mulut sedih
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1785
+      y: 542
+      width: 137
+      height: 36
+    spriteID: 8e3f0c94c979bdc4f917a956a06be69a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1117, y: -683}
+  - name: mulut buka
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1454
+      y: 542
+      width: 141
+      height: 86
+    spriteID: b8239289aaf2a024f99493995fb462c1
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 788, y: -628}
+  - name: mulut biasa
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1785
+      y: 586
+      width: 137
+      height: 36
+    spriteID: 13ccc761cd0467e4eb6270b0eab1545c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1117, y: -633}
+  - name: topi
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 722
+      y: 542
+      width: 724
+      height: 329
+    spriteID: a39d3661a2bb12a4fa170db3b0495762
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 347, y: -902}
+  - name: badan
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1460
+      y: 4
+      width: 502
+      height: 463
+    spriteID: 5cfd78eee6554e54cb241f8f438c5d11
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 974, y: -680}
+  - name: kepala
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 722
+      y: 4
+      width: 730
+      height: 530
+    spriteID: 668a5ac3d506bee4a8026933fe8e1d6f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 350, y: -1075}
+  - name: tangan kanan
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 949
+      y: 879
+      width: 165
+      height: 485
+    spriteID: efa651181f588b24ca10fefefc98933f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 114, y: 232}
+  - name: tangan kiri
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1122
+      y: 879
+      width: 165
+      height: 485
+    spriteID: 28925381ee575074c859abbfc8d9d863
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 648, y: 232}
+  - name: kaki kanan
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 722
+      y: 879
+      width: 219
+      height: 522
+    spriteID: fb9ccbda3da2fc54fae9c1fba7acbc41
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -14, y: 707}
+  - name: kaki kiri
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 710
+      height: 1601
+    spriteID: 8e0a753c4cc98eb4098b14bfa43a967e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -385, y: -168}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 1500, y: 2000}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 2048
+  textureActualHeight: 2048
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Wajah
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 31
+    mosaicPosition: {x: 0, y: 0}
+  - name: Mata
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: 30
+    mosaicPosition: {x: 0, y: 0}
+  - name: mata sedih
+    spriteName: mata sedih
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 924584644b1b1da42b287afb46855658
+    layerID: 29
+    mosaicPosition: {x: 1753, y: 475}
+  - name: mata senang
+    spriteName: mata senang
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 169d6e0d9c0ef0342a26b57f41df8bfc
+    layerID: 28
+    mosaicPosition: {x: 1753, y: 501}
+  - name: mata buka
+    spriteName: mata buka
+    isGroup: 0
+    parentIndex: 1
+    spriteID: b5dd9e1f5290e1048a24e00d2d5ce8ec
+    layerID: 27
+    mosaicPosition: {x: 1603, y: 542}
+  - name: pipi
+    spriteName: pipi
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e06e0a9b2b05dfe4fb9fc9d19de9e3a0
+    layerID: 25
+    mosaicPosition: {x: 1460, y: 475}
+  - name: Mulut
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: 24
+    mosaicPosition: {x: 0, y: 0}
+  - name: mulut sedih
+    spriteName: mulut sedih
+    isGroup: 0
+    parentIndex: 6
+    spriteID: 8e3f0c94c979bdc4f917a956a06be69a
+    layerID: 23
+    mosaicPosition: {x: 1785, y: 542}
+  - name: mulut buka
+    spriteName: mulut buka
+    isGroup: 0
+    parentIndex: 6
+    spriteID: b8239289aaf2a024f99493995fb462c1
+    layerID: 22
+    mosaicPosition: {x: 1454, y: 542}
+  - name: mulut biasa
+    spriteName: mulut biasa
+    isGroup: 0
+    parentIndex: 6
+    spriteID: 13ccc761cd0467e4eb6270b0eab1545c
+    layerID: 21
+    mosaicPosition: {x: 1785, y: 586}
+  - name: Topi
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 18
+    mosaicPosition: {x: 0, y: 0}
+  - name: topi
+    spriteName: topi
+    isGroup: 0
+    parentIndex: 10
+    spriteID: a39d3661a2bb12a4fa170db3b0495762
+    layerID: 17
+    mosaicPosition: {x: 722, y: 542}
+  - name: Badan
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 15
+    mosaicPosition: {x: 0, y: 0}
+  - name: badan
+    spriteName: badan
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 5cfd78eee6554e54cb241f8f438c5d11
+    layerID: 14
+    mosaicPosition: {x: 1460, y: 4}
+  - name: Kepala
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 12
+    mosaicPosition: {x: 0, y: 0}
+  - name: kepala
+    spriteName: kepala
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 668a5ac3d506bee4a8026933fe8e1d6f
+    layerID: 11
+    mosaicPosition: {x: 722, y: 4}
+  - name: Tangan
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 9
+    mosaicPosition: {x: 0, y: 0}
+  - name: tangan kanan
+    spriteName: tangan kanan
+    isGroup: 0
+    parentIndex: 16
+    spriteID: efa651181f588b24ca10fefefc98933f
+    layerID: 8
+    mosaicPosition: {x: 949, y: 879}
+  - name: tangan kiri
+    spriteName: tangan kiri
+    isGroup: 0
+    parentIndex: 16
+    spriteID: 28925381ee575074c859abbfc8d9d863
+    layerID: 7
+    mosaicPosition: {x: 1122, y: 879}
+  - name: Kaki
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 5
+    mosaicPosition: {x: 0, y: 0}
+  - name: kaki kanan
+    spriteName: kaki kanan
+    isGroup: 0
+    parentIndex: 19
+    spriteID: fb9ccbda3da2fc54fae9c1fba7acbc41
+    layerID: 4
+    mosaicPosition: {x: 722, y: 879}
+  - name: kaki kiri
+    spriteName: kaki kiri
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 8e0a753c4cc98eb4098b14bfa43a967e
+    layerID: 3
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: masasep Texture
+  prefabAssetName: masasep Prefab
+  spriteLibAssetName: masasep Sprite Lib
+  secondarySpriteTextures: []

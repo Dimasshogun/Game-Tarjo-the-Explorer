@@ -21,6 +21,7 @@ namespace Code.Scripts.Character
         
         public void Move(Vector3 target, Vector2 inputDirection)
         {
+            Debug.Log(inputDirection);
             if (inputDirection.x != 0f || inputDirection.y != 0f)
             {
                 _modelAnimator.SetFloat(XDirection, inputDirection.x);

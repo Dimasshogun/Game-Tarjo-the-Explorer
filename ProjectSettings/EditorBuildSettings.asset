@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Level/Scenes/Map/MapLayout4.unity
     guid: bc376890f2c862abba7217f54d73a690
   - enabled: 1
+    path: Assets/Level/Scenes/Placements/Level1Placements.unity
+    guid: 945011473c1ed78d6b30db5e45e06d86
+  - enabled: 1
     path: Assets/Level/Scenes/Cutscenes/CutsceneLevel1Intro.unity
     guid: 64966a59834da4aca98d94a4555065e6
   - enabled: 1

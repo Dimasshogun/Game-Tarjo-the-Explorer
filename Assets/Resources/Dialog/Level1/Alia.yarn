@@ -4,9 +4,10 @@ colorID: 8
 position: 217,-87
 ---
 <<if questStage("AliaQuest", 0)>>
-    Alia : Huhuhuhuuuu (Menangis)
+    <<AnimateCharacter Alia Cry>>
+    Alia : Huhuhuhuuuu
     Tarjo : Halo, Alia?
-    Alia : Uuhuhuhuuu (Menangis)
+    Alia : Uuhuhuhuuu
     -> Alia nangis? kamu kenapa?
         [[AliaQuest]]
 <<endif>>
@@ -37,8 +38,10 @@ position: 479,-100
     Tarjo: Hemm, yang manakah lem kertas?
     <<startMinigame Minigames5>>
     <<advanceQuestStage AliaQuest 2>>
+    <<AnimateCharacter Alia Happy>>
     Alia : Waah, terima kasi banyak Tarjo.
     Tarjo : Sama-sama Alia. Aku duluan yaa, sampai ketemu di sekolah....
-    Alia : Baik Jo.
+    Alia : Oke Jo.
+    <<AnimateCharacter Alia Idle>>
 <<endif>>
 ===
