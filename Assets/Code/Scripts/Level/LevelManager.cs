@@ -1,11 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Code.Scripts
+namespace Code.Scripts.Level
 {
     public class LevelManager : MonoBehaviour
     {

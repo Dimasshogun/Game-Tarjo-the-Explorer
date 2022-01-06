@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using UnityEngine;
 
-namespace Code.Scripts
+namespace Code.Scripts.Level
 {
     [System.Serializable]
     public struct LevelSetup

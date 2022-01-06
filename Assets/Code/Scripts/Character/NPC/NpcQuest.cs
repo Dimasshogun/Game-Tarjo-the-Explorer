@@ -1,9 +1,8 @@
-using System;
 using Code.Scripts.Quest;
 using TMPro;
 using UnityEngine;
 
-namespace Code.Scripts.NPC
+namespace Code.Scripts.Character.NPC
 {
     public class NpcQuest : MonoBehaviour
     {

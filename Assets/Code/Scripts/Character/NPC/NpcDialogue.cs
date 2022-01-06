@@ -1,9 +1,6 @@
-using System.IO;
-using Code.Scripts.Quest;
 using UnityEngine;
-using Yarn.Unity;
 
-namespace Code.Scripts.NPC
+namespace Code.Scripts.Character.NPC
 {
     public class NpcDialogue : MonoBehaviour
     {
