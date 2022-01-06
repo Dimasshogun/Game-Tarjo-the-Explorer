@@ -1,9 +1,9 @@
 title: Alia
 tags: 
 colorID: 8
-position: 217,-87
+position: -60,-174
 ---
-<<if questStage("AliaQuest", 0)>>
+<<if questStage("AliaQuest", 1)>>
     <<AnimateCharacter Alia Cry>>
     Alia : Huhuhuhuuuu
     Tarjo : Halo, Alia?
@@ -19,17 +19,17 @@ position: 217,-87
 title: AliaQuest
 tags: 
 colorID: 0
-position: 479,-100
+position: 212,-173
 ---
-<<if questStage("AliaQuest", 0)>>
+<<if questStage("AliaQuest", 1)>>
     Alia: Huhuuu aku disuruh Ayah beli sarapan, tapi barusan aku mainin uangku terus tidak sengaja uangku sobek. Aku tidak bisa beli nasi, Ayah pasti marah sama Alia jo.
     Tarjo: Yaah, sobek. Coba liat uangnya?
     Alia: Ini uangku, 20 ribu buat beli 2 nasi bungkus” (Alia menunjukkan uangnya yang terbelah menjadi 2)
     Tarjo: Hemm.. (Berfikir)
-    <<advanceQuestStage AliaQuest 1>>
+    <<advanceQuestStage AliaQuest 2>>
 <<endif>>
 
-<<if questStage("AliaQuest", 1)>>
+<<if questStage("AliaQuest", 2)>>
 -> Bagaimana cara aku menolong Alia ya?
     Tarjo: Kalau uangku banyak, kamu bisa pake uangku dulu, tapi uangku cuma 10 ribu. 
     Alia: Tolong aku ya Joo..
@@ -37,11 +37,31 @@ position: 479,-100
     (Membuka tas. User diminta untuk mencari lem kertas)
     Tarjo: Hemm, yang manakah lem kertas?
     <<startMinigame Minigames5>>
-    <<advanceQuestStage AliaQuest 2>>
+    <<advanceQuestStage AliaQuest 3>>
     <<AnimateCharacter Alia Happy>>
     Alia : Waah, terima kasi banyak Tarjo.
     Tarjo : Sama-sama Alia. Aku duluan yaa, sampai ketemu di sekolah....
     Alia : Oke Jo.
     <<AnimateCharacter Alia Idle>>
+<<endif>>
+===
+title: AliaQuestPass
+tags: 
+colorID: 0
+position: 215,75
+---
+<<if questStage("AliaQuest", 0)>>
+    Tarjo : Itu kan, Alia. Dia kenapa, ya?
+    Tarjo : Samperin Alia, ah.
+    <<advanceQuestStage AliaQuest 1>>
+    <<stop>>
+<<endif>>
+
+<<if questStage("AliaQuest", 1)>>
+    Tarjo : Ah biarin aja, aku lanjut pergi sekolah.
+    Tarjo : Tapi kasian Alia, dia nangis. 
+    <<moveCharacter Tarjo Alia teleport>>
+ aja deh
+    <<stop>>
 <<endif>>
 ===

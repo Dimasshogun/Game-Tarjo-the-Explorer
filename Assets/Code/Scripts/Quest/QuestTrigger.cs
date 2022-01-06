@@ -31,6 +31,12 @@ namespace Code.Scripts.Quest
             var playerMovement = GameObject.FindWithTag("Player").GetComponent<MovementInputHandler>();
             var dialogueRunner = FindObjectOfType<DialogueRunner>();
 
+            if (questStage.status == QuestStatus.Success)
+            {
+                gameObject.SetActive(false);
+                yield break;
+            }
+
             playerMovement.enabled = false;
             yield return new WaitForSeconds(1.0f);
             StartCoroutine(CameraManager.Instance.SwitchVirtualCam(npcCamera));

@@ -77,6 +77,10 @@ namespace Code.Scripts.Control
         {
             _controls.Player.Enable();
             gameplayUI.SetActive(true);
+            if (_playerMovement != null)
+            {
+                _playerMovement.enabled = true;
+            }
             Cursor.lockState = CursorLockMode.Locked;
             CameraManager.Instance.SwitchToPlayerCam();
         }
@@ -85,6 +89,10 @@ namespace Code.Scripts.Control
         {
             _controls.Player.Disable();
             gameplayUI.SetActive(false);
+            if (_playerMovement != null)
+            {
+                _playerMovement.enabled = false;
+            }
             Cursor.lockState = CursorLockMode.None;
         }
     }

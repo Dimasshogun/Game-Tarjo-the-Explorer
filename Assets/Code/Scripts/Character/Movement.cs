@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Code.Scripts.Character
@@ -21,6 +22,12 @@ namespace Code.Scripts.Character
         
         public void Move(Vector3 target, Vector2 inputDirection)
         {
+            AnimateMove(inputDirection);
+            _rigidbody.MovePosition(target);
+        }
+
+        private void AnimateMove(Vector2 inputDirection)
+        {
             if (inputDirection.x != 0f || inputDirection.y != 0f)
             {
                 _modelAnimator.SetFloat(XDirection, inputDirection.x);
@@ -40,7 +47,11 @@ namespace Code.Scripts.Character
                     _audioSource.Stop();
                 }
             }
-            _rigidbody.MovePosition(target);
+        }
+
+        private void OnDisable()
+        {
+            AnimateMove(Vector2.zero);
         }
     }
 }

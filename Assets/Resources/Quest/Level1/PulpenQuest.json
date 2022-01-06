@@ -22,7 +22,13 @@
       "relatedNpc": "MangAsep"
     },
     {
-      "title": "Beli pulpen di warung",
+      "title": "Beli pulpen di warung Mang Asep",
+      "instruction": "Kata Ibu warung Mang Asep menjual pulpen. dimana warung Mang Asep?",
+      "status": 2,
+      "relatedNpc": "MangAsep"
+    },
+    {
+      "title": "Beli pulpen",
       "instruction": "Warung Mang Asep sepertinya menjual pulpen",
       "status": 2,
       "relatedNpc": "MangAsep"

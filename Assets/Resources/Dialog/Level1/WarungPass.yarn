@@ -1,0 +1,22 @@
+title: WarungPass
+tags: 
+colorID: 0
+position: -285,-845
+---
+<<if questStage("PulpenQuest", 2)>>
+    Tarjo : Sepertinya aku akan singgah untuk membeli pulpen
+    <<advanceQuestStage PulpenQuest 4>>
+    <<stop>>
+<<endif>>
+
+<<if questStage("PulpenQuest", 3)>>
+    Tarjo : Ini dia warung Mang Asep
+    <<advanceQuestStage PulpenQuest 4>>
+    <<stop>>
+<<endif>>
+
+<<if questStage("PulpenQuest", 4)>>
+    Tarjo : Tapi di pagi gini cuma warung mang Asep yang buka, singgah aja deh.
+    <<moveCharacter Tarjo MangAsep teleport>>
+<<endif>>
+===

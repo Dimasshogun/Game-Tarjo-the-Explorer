@@ -14,10 +14,11 @@ Tarjo: Tapi nanti kalau aku jatuh, aku tidak jadi pergi kesekolah, hemmm (Tarjo 
 <<advanceQuestStage BridgeQuest 1>>
 <<endif>>
 
-Tarjo: Ahaa !!! Itu potongan kayu. Kayaknya itu potongan kayu jembatan. Aku coba pasang ah..
-
-<<startMinigame MinigameBridge>>
-<<advanceQuestStage BridgeQuest 2>>
+<<if questStage("BridgeQuest", 1)>>
+    Tarjo: Ahaa !!! Itu potongan kayu. Kayaknya itu potongan kayu jembatan. Aku coba pasang ah..
+    <<startMinigame MinigameBridge>>
+    <<advanceQuestStage BridgeQuest 2>>
+<<endif>>
 
 <<if questStage("BridgeQuest", 2)>>
     Tarjo: YEEYYY!! Sekarang mari kita melewati jembatan ini, dan lanjut pergi ke sekolahh!
