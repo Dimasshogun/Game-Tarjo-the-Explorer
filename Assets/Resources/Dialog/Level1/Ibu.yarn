@@ -8,11 +8,19 @@ position: -72,-604
 <<switchCamera Cutscene1Cam1 Cut>>
 Di pagi yang begitu cerah, Tarjo akan segera pergi ke sekolah. 
 <<moveCharacter Tarjo Cutscene1Target1 walk>>
-Tarjo: Bu tarjo pergi kesekolah dulu yah,
+Tarjo: Bu tarjo pergi kesekolah dulu yah
 
 Ibu: Iya ini uang sakunya ya jo (Ibu memberi uang 5 ribu)
 
-Tarjo: Ouh iyaa pulpen Tarjo habis bu,.. Beli pulpen baru ya bu? 
+
+Tarjo: Ouh iyaa pulpen Tarjo habis bu..
+-> Minta pulpen
+    Tarjo : Ibu punya pulpen nggak, bu? Pulpen Tarjo habis..
+    Ibu : Nggak punya, Jo. Beli aja, ambil uang 5 ribu di meja kamar ibu yaa. 
+-> Minta uang tambahan
+    Tarjo: Beli pulpen baru ya bu? 
+    Ibu : Boleh, kalau gitu ambil uang 5 ribu di meja kamar ibu yaa. 
+
 <<startQuest PulpenQuest>>
 
 Ibu: Boleh, kalau begitu ambil uang 5 ribu di meja kamar Ibu yaa.
@@ -47,5 +55,12 @@ tags:
 colorID: 0
 position: -417,-696
 ---
+<<if questStage("PulpenQuest", 2)>>
+    -> Beli pulpen dimana?
+        Tarjo: Oh iya bu. Pagi-pagi begini ada warung yang buka nggak ya?
+        Ibu: Warung Mang Asep kayaknya udah buka Jo. Dia juga jual alat tulis.
+        Tarjo: Oke, Makasih bu.
+        <<advanceQuestStage PulpenQuest 3>>
+<<endif>>
 Ibu : Hati-hati di jalan, Tarjo. Jadi anak pintar, ya.
 ===

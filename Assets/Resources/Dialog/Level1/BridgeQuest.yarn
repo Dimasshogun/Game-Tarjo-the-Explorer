@@ -5,7 +5,10 @@ position: 857,379
 ---
 <<if questStage("BridgeQuest", 0)>>
 Tarjo: Terus aku lewatnya gimana ya?
-Tarjo: Oh, lompat aja kali ya? 
+-> Lompat
+    Tarjo: Oh, lompat aja kali ya? 
+-> Lewat kayu kecil
+    Tarjo : Lewat kayu kecil yang membujur ini bisa nggak ya?
 Tarjo: Tapi nanti kalau aku jatuh, aku tidak jadi pergi kesekolah, hemmm (Tarjo melihat sekeliling, lalu menemukan potongan kayu)
 
 <<advanceQuestStage BridgeQuest 1>>

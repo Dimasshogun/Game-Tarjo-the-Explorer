@@ -23,8 +23,8 @@
     },
     {
       "title": "Beli pulpen di warung",
-      "instruction": "Warung itu sepertinya menjual pulpen",
-      "status": 1,
+      "instruction": "Warung Mang Asep sepertinya menjual pulpen",
+      "status": 2,
       "relatedNpc": "MangAsep"
     },
     {
