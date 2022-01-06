@@ -12,23 +12,37 @@ public class SwipeControl : MonoBehaviour
 
     public GameObject buttonLanjutkan;
     public GameObject buttonKiri;
+    [SerializeField] private AudioClip[] audioClip;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         buttonLanjutkan.SetActive(false);
         buttonKiri.SetActive(false);
-
+        audioSource = GetComponent<AudioSource>();
+        if (audioClip[0] != null)
+        {
+            audioSource.clip = audioClip[0];
+            audioSource.Play();
+        }
     }
 
     //fungsi buat tombol nextnya
     public void next()
     {
-        if (posisi< pos.Length - 1){
+        if (posisi < pos.Length - 1)
+        {
             posisi += 1;
             scroll_pos = pos[posisi];
+            if (audioClip[posisi] != null)
+            {
+                audioSource.clip = audioClip[posisi];
+                audioSource.Play();
+            }
         }
-        if (posisi == pos.Length -1){
+        if (posisi == pos.Length - 1)
+        {
             buttonLanjutkan.SetActive(true);
             buttonKiri.SetActive(true);
         }
@@ -37,10 +51,11 @@ public class SwipeControl : MonoBehaviour
     // untuk tombol previous atau sebelumnya
     public void prev()
     {
-        if (posisi > 0){
+        if (posisi > 0)
+        {
             posisi -= 1;
             scroll_pos = pos[posisi];
-            
+
         }
     }
 
@@ -58,7 +73,7 @@ public class SwipeControl : MonoBehaviour
         }
 
         //funsi scroll ketika menggerakan objectnya
-        if (Input.GetMouseButton (0))
+        if (Input.GetMouseButton(0))
         {
             //nilai dari value dari posisi object di masukan ke variable scrol pos
             scroll_pos = scrollbar.GetComponent<Scrollbar>().value;
@@ -69,7 +84,7 @@ public class SwipeControl : MonoBehaviour
             {
                 if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2))
                 {
-                    scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp (scrollbar.GetComponent<Scrollbar>().value, pos[i], 0.15f);
+                    scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[i], 0.15f);
                     posisi = i; //agar kalau swipe posisinya selalu update
                 }
             }
