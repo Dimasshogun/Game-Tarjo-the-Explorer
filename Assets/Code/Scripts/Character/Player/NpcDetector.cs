@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Code.Scripts.Character
+namespace Code.Scripts.Character.Player
 {
     public class NpcDetector : MonoBehaviour
     {

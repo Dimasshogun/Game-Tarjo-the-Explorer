@@ -1,38 +1,47 @@
 title: IbuMinigame
 tags: 
 colorID: 0
-position: -68,-603
+position: -72,-604
 ---
 <<AnimateCharacter Ibu Smile>>
 <<moveCharacter Tarjo Cutscene1Target2 teleport>>
 <<switchCamera Cutscene1Cam1 Cut>>
 Di pagi yang begitu cerah, Tarjo akan segera pergi ke sekolah. 
 <<moveCharacter Tarjo Cutscene1Target1 walk>>
-Tarjo: Bu tarjo pergi kesekolah dulu yah,
+Tarjo: Bu tarjo pergi kesekolah dulu yah
 
-Ibu: iya ini uang sakunya ya jo (ibu memberi uang 3k)
+Ibu: Iya ini uang sakunya ya jo (Ibu memberi uang 5 ribu)
 
-Tarjo: ouh iyaa pulpen tarjo habis bu,.. beli pulpen baru ya bu? 
+
+Tarjo: Ouh iyaa pulpen Tarjo habis bu..
+-> Minta pulpen
+    Tarjo : Ibu punya pulpen nggak, bu? Pulpen Tarjo habis..
+    Ibu : Nggak punya, Jo. Beli aja, ambil uang 5 ribu di meja kamar ibu yaa. 
+-> Minta uang tambahan
+    Tarjo: Beli pulpen baru ya bu? 
+    Ibu : Boleh, kalau gitu ambil uang 5 ribu di meja kamar ibu yaa. 
+
 <<startQuest PulpenQuest>>
 
-Ibu: boleh, kalau gitu ambil uang 5 ribu di meja kamar ibu yaa.
+Ibu: Boleh, kalau begitu ambil uang 5 ribu di meja kamar Ibu yaa.
 <<advanceQuestStage PulpenQuest 1>>
 
-Tarjo: baik ibuu (Tarjo pergi ke meja di kamar ibu)
+Tarjo: Baik Ibuu (Tarjo pergi ke meja di kamar Ibu)
 <<moveCharacter Tarjo Cutscene1Target2 walk>>
 
-uang manakah yang akan Tarjo ambil? (Tarjo memperhatikan uang satu-persatu)
+Uang manakah yang akan Tarjo ambil? (Tarjo memperhatikan uang satu-persatu)
 <<startMinigame Minigames1>>
 
 <<moveCharacter Tarjo Cutscene1Target1 walk>>
-Tarjo: Sudah bu, tarjo berangkat yaaaaaa!!
+Tarjo: Sudah bu, Tarjo berangkat yaaaaaa
 Ibu : Hati-hati di jalan, Tarjo. Jadi anak pintar, ya.
 <<AnimateCharacter Ibu Wave>>
-Tarjo: Pasti, buu. Baayyy
+Tarjo: Pasti, buu. Sampai jumpa Bu.
+Ibu : Iya jo.
 
 <<moveCharacter Tarjo Cutscene1Target3 walk>>
 <<switchCamera Cutscene1Cam2 EaseIn>>
-Tarjo: Hari ini uangku lebih banyak dari biasanya. ini uang pertama 5 ribu, dan ini uang kedua 5 ribu. Jadi jumlah uangku berapa ya?
+Tarjo: Hari ini uangku lebih banyak dari biasanya, ini uang pertama 5 ribu dan uang kedua 5 ribu. Jadi jumlah uangku berapa ya?
 <<startMinigame Minigames2>>
 Tarjo : YAPP!! Aku memang anak pintarr! Ayo lanjut jalann..
 Tarjo : Lalala lalalaa..
@@ -40,4 +49,18 @@ Tarjo : Lalala lalalaa..
 <<advanceQuestStage PulpenQuest 2>>
 <<switchToPlayerCamera>>
 <<AnimateCharacter Ibu Smile>>
+===
+title: Ibu
+tags: 
+colorID: 0
+position: -417,-696
+---
+<<if questStage("PulpenQuest", 2)>>
+    -> Beli pulpen dimana?
+        Tarjo: Oh iya bu. Pagi-pagi begini ada warung yang buka nggak ya?
+        Ibu: Warung Mang Asep kayaknya udah buka Jo. Dia juga jual alat tulis.
+        Tarjo: Oke, Makasih bu.
+        <<advanceQuestStage PulpenQuest 3>>
+<<endif>>
+Ibu : Hati-hati di jalan, Tarjo. Jadi anak pintar, ya.
 ===

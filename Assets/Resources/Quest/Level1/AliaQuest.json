@@ -4,10 +4,16 @@
   "startingType": 1,
   "stages": [
     {
+      "title": "Kenapa Alia?",
+      "instruction": "Bicara dengan Alia",
+      "relatedNpc": "Alia",
+      "status": 0
+    },
+    {
       "title": "Kenapa Alia menangis?",
       "instruction": "Tanyakan kenapa Alia menangis",
       "relatedNpc": "Alia",
-      "status": 0
+      "status": 1
     },
     {
       "title": "Perbaiki Uang Alia",

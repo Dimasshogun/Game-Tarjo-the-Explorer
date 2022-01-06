@@ -35,7 +35,7 @@ namespace Code.Scripts.Cutscene
         private IEnumerator PlayCutscene()
         {
             playerMovement.enabled = false;
-            if (!SceneManager.GetSceneByName(scene).isLoaded)
+            if (scene != "" && !SceneManager.GetSceneByName(scene).isLoaded)
             {
                 SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
             }

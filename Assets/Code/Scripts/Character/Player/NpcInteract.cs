@@ -1,12 +1,12 @@
 using System.Collections;
+using Code.Scripts.Character.NPC;
 using Code.Scripts.Control;
-using Code.Scripts.NPC;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Yarn.Unity;
 
-namespace Code.Scripts.Character
+namespace Code.Scripts.Character.Player
 {
     public class NpcInteract : MonoBehaviour
     {

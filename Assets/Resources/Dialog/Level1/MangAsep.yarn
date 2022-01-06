@@ -1,22 +1,16 @@
 title: MangAsep
 tags: 
 colorID: 0
-position: 35,-433
+position: 463,218
 ---
-<<if questStage("PulpenQuest", 2)>>
-    Tarjo : Sepertinya aku akan singgah untuk membeli pulpen
-    <<advanceQuestStage PulpenQuest 3>>
-    <<stop>>
-<<endif>>
-
-<<if questStage("PulpenQuest", 3)>>
+<<if questStage("PulpenQuest", 4)>>
     Tarjo : Pagi, Mang Asep, Tarjo mau beli pulpen nihh.
-    Mang Asep : Boleh jo, harganya 3000 ya, jo. 
-    Tarjo : Okey mang, ini uang Tarjo 8000.
-    Mang Asep : Jadi kembali berapa ya jo?
+    Mang Asep : Boleh jo, harganya 3 ribu ya, jo. 
+    Tarjo : Okey Mang, ini uang Tarjo 5 Ribu.
+    Mang Asep : Jadi kembalinya berapa ya jo?
     <<startMinigame Minigames4>>
     Tarjo : Terima kasih, Mang. Tarjo pergi sekolah dulu, yaa. 
-    <<advanceQuestStage PulpenQuest 4>>
+    <<advanceQuestStage PulpenQuest 5>>
 <<endif>>
 
 Mang Asep : Hati-hati di jalan, Tarjo, belajar yang rajin.
