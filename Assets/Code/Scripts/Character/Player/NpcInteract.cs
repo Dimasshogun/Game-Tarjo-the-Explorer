@@ -35,7 +35,10 @@ namespace Code.Scripts.Character.Player
         {
             if (_targetNpc != null && dialogueRunner.NodeExists(_targetNpc.entryNode))
             {
-                interactButton.gameObject.SetActive(true);
+                if (interactButton != null)
+                {
+                    interactButton.gameObject.SetActive(true);
+                }
             }
             else
             {
@@ -45,7 +48,10 @@ namespace Code.Scripts.Character.Player
         
         private void OnDisable()
         {
-            interactButton.gameObject.SetActive(false);
+            if (interactButton != null)
+            {
+                interactButton.gameObject.SetActive(false);
+            }
         }
 
         private IEnumerator StartDialog()

@@ -62,6 +62,7 @@ namespace Code.Scripts.Minigame
                 return; 
             }
             endScreen.SetActive(false);
+            CheckComplete();
         }
 
         public void PlayCorrect()

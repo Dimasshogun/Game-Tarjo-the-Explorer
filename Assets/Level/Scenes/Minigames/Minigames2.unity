@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731319, g: 0.38074932, b: 0.35872564, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1240,6 +1240,7 @@ MonoBehaviour:
   correct:
   - {fileID: 8300000, guid: 00e4adacb5ad9e7418877c21abf337b5, type: 3}
   incorrect: {fileID: 8300000, guid: 2a5f5ca37199140468cbc6b3e8364834, type: 3}
+  targetContainer: {fileID: 547857304}
   dropTargets: []
   completed: 0
 --- !u!82 &680344947
