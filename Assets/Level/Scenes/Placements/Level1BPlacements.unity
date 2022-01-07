@@ -1754,7 +1754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Bridge
-  entryNode: BridgeQuest
+  entryNode: Bridge
 --- !u!136 &1444582649
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4063,15 +4063,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8856488771689894012, guid: cb81401bdbd811aa99fcab404262c9c5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.060823023
+      value: -0.060823027
       objectReference: {fileID: 0}
     - target: {fileID: 8856488771689894012, guid: cb81401bdbd811aa99fcab404262c9c5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.092368655
+      value: -0.09236863
       objectReference: {fileID: 0}
     - target: {fileID: 8856488771689894012, guid: cb81401bdbd811aa99fcab404262c9c5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0056529096
+      value: 0.0056529087
       objectReference: {fileID: 0}
     - target: {fileID: 8856488772662075530, guid: cb81401bdbd811aa99fcab404262c9c5, type: 3}
       propertyPath: m_RootOrder
