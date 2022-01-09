@@ -3,7 +3,12 @@ guid: 537c89191eb4ca6ee96a31c8b3f59c81
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bahan.001
+    second: {fileID: 2100000, guid: 247938d09ade7e959b65458ecd89467a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

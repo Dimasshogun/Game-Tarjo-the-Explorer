@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: leafsGreen
-    second: {fileID: 5539187201299519950, guid: 93ef48b82608233b49ddcbe2a0ad93ae, type: 3}
+    second: {fileID: 2100000, guid: 247938d09ade7e959b65458ecd89467a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
