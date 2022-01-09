@@ -363,8 +363,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 759704902}
   m_HandleRect: {fileID: 759704901}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.07484804
+  m_Value: 0.050160427
+  m_Size: 0.075
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1337,7 +1337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1169.9995, y: 532.5}
+  m_AnchoredPosition: {x: -2617.63, y: 532.5}
   m_SizeDelta: {x: 0, y: 1064}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &826112150
@@ -1691,7 +1691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -86.285034, y: 121.002686}
+  m_AnchoredPosition: {x: -86.28516, y: 121.002686}
   m_SizeDelta: {x: 172.57007, y: 242.00537}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &992340328
@@ -2420,6 +2420,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5817060149661949239, guid: 76ca70f6ddd66fcecb1d871d8d7431f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1643174016}
+    - target: {fileID: 5817060149661949239, guid: 76ca70f6ddd66fcecb1d871d8d7431f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1643174016}
+    - target: {fileID: 5817060149661949239, guid: 76ca70f6ddd66fcecb1d871d8d7431f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StartChangeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817060149661949239, guid: 76ca70f6ddd66fcecb1d871d8d7431f5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Code.Scripts.Level.SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5888087310631118106, guid: 76ca70f6ddd66fcecb1d871d8d7431f5, type: 3}
       propertyPath: m_IsActive
       value: 0
