@@ -1,6 +1,7 @@
 using System.Collections;
 using Cinemachine;
 using Code.Scripts.Character;
+using Code.Scripts.Character.NPC;
 using UnityEngine;
 using Yarn.Unity;
 
@@ -53,6 +54,12 @@ namespace Code.Scripts.Cutscene
 
             var character = CharacterManager.Instance.characterInstances.Find(c => c.characterName == characterName).gameObject;
             var targetTransform = GameObject.Find(targetName).GetComponent<Transform>();
+
+            targetTransform.TryGetComponent<NpcDialogue>(out var npcDialogue);
+            if (npcDialogue != null)
+            {
+                targetTransform = npcDialogue.talkSpot;
+            }
 
             StartCoroutine(moveOption == "teleport"
                 ? TeleportCharacter(character, targetTransform, onComplete)

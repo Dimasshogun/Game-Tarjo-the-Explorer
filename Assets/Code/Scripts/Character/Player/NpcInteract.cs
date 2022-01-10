@@ -58,6 +58,10 @@ namespace Code.Scripts.Character.Player
         {
             if (!_onDialogue)
             {
+                if (_targetNpc.talkSpot != null)
+                {
+                    transform.position = _targetNpc.talkSpot.position;
+                }
                 dialogueRunner.StartDialogue(_targetNpc.entryNode);
                 ToggleOnDialogue(true);
             }
@@ -79,6 +83,7 @@ namespace Code.Scripts.Character.Player
 
             if (onDialogue)
             {
+                _targetNpc.questMarker.SetActive(false);
                 var targetNpcCam = _targetNpc.gameObject.GetComponentInChildren<CameraInstance>();
                 StartCoroutine(CameraManager.Instance.SwitchVirtualCam(targetNpcCam));
             }

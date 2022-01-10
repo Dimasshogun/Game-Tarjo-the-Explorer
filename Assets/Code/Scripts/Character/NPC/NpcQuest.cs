@@ -6,10 +6,13 @@ namespace Code.Scripts.Character.NPC
 {
     public class NpcQuest : MonoBehaviour
     {
-        [SerializeField] private GameObject marker;
+        public GameObject marker;
+        
+        private TextMeshProUGUI markerText;
 
         private void Start()
         {
+            markerText = marker.GetComponentInChildren<TextMeshProUGUI>();
             QuestManager.Instance.UpdateNpc += UpdateMarker;
         }
 
@@ -24,25 +27,28 @@ namespace Code.Scripts.Character.NPC
             {
                 case QuestStatus.Inactive:
                     marker.SetActive(true);
-                    marker.GetComponentInChildren<TextMeshProUGUI>().text = "!";
-                    marker.GetComponentInChildren<TextMeshProUGUI>().color = Color.yellow;
+                    markerText.text = "!";
+                    markerText.color = Color.yellow;
                     break;
                 case QuestStatus.TaskPending:
                     marker.SetActive(true);
-                    marker.GetComponentInChildren<TextMeshProUGUI>().text = "!";
-                    marker.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+                    markerText.text = "!";
+                    markerText.color = Color.white;
                     break;
                 case QuestStatus.TaskDone:
                     marker.SetActive(true);
-                    marker.GetComponentInChildren<TextMeshProUGUI>().text = "?";
-                    marker.GetComponentInChildren<TextMeshProUGUI>().color = Color.yellow;
+                    markerText.text = "?";
+                    markerText.color = Color.yellow;
                     break;
                 case QuestStatus.Success:
                 case QuestStatus.Fail:
                     marker.SetActive(false);
+                    markerText.text = "";
                     QuestManager.Instance.UpdateNpc -= UpdateMarker;
                     break;
                 default:
+                    marker.SetActive(false);
+                    markerText.text = "";
                     break;
             }
         }
