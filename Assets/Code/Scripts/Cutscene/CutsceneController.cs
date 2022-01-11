@@ -11,9 +11,10 @@ namespace Code.Scripts.Cutscene
     {
         private void Start()
         {
-            FindObjectOfType<DialogueRunner>().AddCommandHandler("switchCamera", SwitchCutsceneCam);
-            FindObjectOfType<DialogueRunner>().AddCommandHandler("switchToPlayerCamera", SwitchToPlayerCamera);
-            FindObjectOfType<DialogueRunner>().AddCommandHandler("moveCharacter", StartMoveCharacter);
+            var dialogueRunner = FindObjectOfType<DialogueRunner>();
+            dialogueRunner.AddCommandHandler("switchCamera", SwitchCutsceneCam);
+            dialogueRunner.AddCommandHandler("switchToPlayerCamera", SwitchToPlayerCamera);
+            dialogueRunner.AddCommandHandler("moveCharacter", StartMoveCharacter);
         }
 
         public void SwitchCutsceneCam(string[] parameters)

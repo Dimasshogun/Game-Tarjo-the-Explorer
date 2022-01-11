@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 using Yarn.Unity;
@@ -66,6 +67,14 @@ namespace Code.Scripts.Quest
                 var quest = quests.Find(quest => quest.code == questCode);
                 return quest.currentStage == stageIndex;
             });
+            
+            dialogueRunner.AddFunction("isQuestComplete", 1, delegate (Yarn.Value[] parameters)
+            {
+                var questCode = parameters[0].AsString;
+                var questStage = GetQuestStage(questCode);
+
+                return questStage.status == QuestStatus.Success;
+            });
         }
         
         public void StartQuest(string[] parameters)
@@ -96,12 +105,6 @@ namespace Code.Scripts.Quest
         {
             var quest = quests.Find(quest => quest.code == questCode);
             return quest.stages[quest.currentStage];
-        }
-        
-        public string GetQuestNpc(string questCode)
-        {
-            var quest = quests.Find(quest => quest.code == questCode);
-            return quest.stages[quest.currentStage].relatedNpc;
         }
 
         public void RunNpcUpdate()
