@@ -7,6 +7,7 @@ namespace Code.Scripts.Character.NPC
     public class NpcQuest : MonoBehaviour
     {
         public GameObject marker;
+        public GameObject barrier;
         
         private TextMeshProUGUI markerText;
 
@@ -41,6 +42,14 @@ namespace Code.Scripts.Character.NPC
                     markerText.color = Color.yellow;
                     break;
                 case QuestStatus.Success:
+                    marker.SetActive(false);
+                    markerText.text = "";
+                    QuestManager.Instance.UpdateNpc -= UpdateMarker;
+                    if (barrier != null)
+                    {
+                        Destroy(barrier);
+                    }
+                    break;
                 case QuestStatus.Fail:
                     marker.SetActive(false);
                     markerText.text = "";
