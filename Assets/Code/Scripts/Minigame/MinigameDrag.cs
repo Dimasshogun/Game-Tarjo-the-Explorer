@@ -13,12 +13,30 @@ namespace Code.Scripts.Minigame
         private Vector3 _initialPosition;
         private Quaternion _initialRotation;
         
+        private Camera _mainCamera;
+        private MinigameControls _controls;
+
+        private void OnDisable()
+        {
+            _controls.Disable();
+        }
         private void Awake()
         {
             _initialPosition = transform.position;
             _initialRotation = transform.rotation;
             _rb = GetComponent<Rigidbody>();
             _rb.isKinematic = true;
+            _controls = new MinigameControls();
+        }
+
+        private void Start()
+        {
+            _mainCamera = Camera.main;
+        }
+
+        private void OnEnable()
+        {
+            _controls.Enable();
         }
 
         public void OnDragStart()
@@ -31,6 +49,21 @@ namespace Code.Scripts.Minigame
 
         public void OnDrag()
         {
+            var ray = _mainCamera.ScreenPointToRay(_controls.Player.TouchPoint.ReadValue<Vector2>());
+            if (!Physics.Raycast(ray, out var hit, Mathf.Infinity, 1 << LayerMask.NameToLayer("Minigame")))
+            {
+                return;
+            }
+
+            if (hit.collider == null || hit.collider.gameObject.GetComponent<MinigameDropTarget>() == null)
+            {
+                return;
+            }
+
+            var objectTransform = transform;
+            var targetTransform = hit.collider.transform;
+            objectTransform.position = targetTransform.position;
+            objectTransform.rotation = targetTransform.rotation;
         }
         
         public void OnDragEnd()
