@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44659358, g: 0.49642974, b: 0.57482505, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -363,8 +363,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 759704902}
   m_HandleRect: {fileID: 759704901}
   m_Direction: 0
-  m_Value: 0.050160427
-  m_Size: 0.075
+  m_Value: 0
+  m_Size: 0.07499299
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1337,7 +1337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2617.63, y: 532.5}
+  m_AnchoredPosition: {x: -1169.9998, y: 532.5}
   m_SizeDelta: {x: 0, y: 1064}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &826112150
@@ -1395,6 +1395,7 @@ MonoBehaviour:
   scrollbar: {fileID: 250846946}
   buttonLanjutkan: {fileID: 1145602028}
   buttonKiri: {fileID: 2006936354}
+  buttonKanan: {fileID: 992340326}
   audioClip:
   - {fileID: 8300000, guid: a4cb2f7a6974c844cbc74528965f94ad, type: 3}
   - {fileID: 8300000, guid: 81778c9f58cc2cc469e03ca5508f11cb, type: 3}
@@ -1891,16 +1892,16 @@ RectTransform:
   m_GameObject: {fileID: 1145602028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 387560445}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -120, y: 0}
-  m_SizeDelta: {x: 300, y: 71}
-  m_Pivot: {x: 1, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -86.28516, y: 121.002686}
+  m_SizeDelta: {x: 172.57007, y: 242.00537}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1145602030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1977,7 +1978,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3b957a20945762a46813fe3acd5cb0a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30d6aa158f1957a4cb12919d3060782b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

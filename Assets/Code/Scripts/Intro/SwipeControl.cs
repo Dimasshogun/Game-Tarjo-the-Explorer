@@ -12,6 +12,7 @@ namespace Code.Scripts.Intro
 
         public GameObject buttonLanjutkan;
         public GameObject buttonKiri;
+        public GameObject buttonKanan;
         [SerializeField] private AudioClip[] audioClip;
         public AudioSource audioSource;
 
@@ -20,6 +21,7 @@ namespace Code.Scripts.Intro
         {
             buttonLanjutkan.SetActive(false);
             buttonKiri.SetActive(false);
+            buttonKanan.SetActive(true);
             audioSource = GetComponent<AudioSource>();
             if (audioClip[0] != null)
             {
@@ -45,6 +47,7 @@ namespace Code.Scripts.Intro
             {
                 buttonLanjutkan.SetActive(true);
                 buttonKiri.SetActive(true);
+                buttonKanan.SetActive(false);
             }
         }
 
@@ -55,7 +58,23 @@ namespace Code.Scripts.Intro
             {
                 _posisi -= 1;
                 _scrollPos = _pos[_posisi];
-
+                if (audioClip[_posisi] != null)
+                {
+                    audioSource.clip = audioClip[_posisi];
+                    audioSource.Play();
+                }
+                if (_posisi > 0)
+                {
+                    buttonKiri.SetActive(true);
+                    buttonKanan.SetActive(true);
+                    buttonLanjutkan.SetActive(false);
+                }
+                if (_posisi == 0)
+                {
+                    buttonKiri.SetActive(false);
+                    buttonKanan.SetActive(true);
+                    buttonLanjutkan.SetActive(false);
+                }
             }
         }
 
