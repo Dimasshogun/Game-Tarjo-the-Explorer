@@ -29,6 +29,7 @@ namespace Code.Scripts.Quest
         [SerializeField] private TextMeshProUGUI questTitle;
         [SerializeField] private TextMeshProUGUI questInstruction;
         [SerializeField] private GameObject questContainer;
+        [SerializeField] private float waitTime = 3.0f;
 
         private void Awake()
         {
@@ -63,7 +64,7 @@ namespace Code.Scripts.Quest
             
             questContainer.SetActive(true);
 
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(waitTime);
             
             questContainer.SetActive(false);
         }
