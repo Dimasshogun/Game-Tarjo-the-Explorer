@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731319, g: 0.38074932, b: 0.35872564, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -486,13 +486,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 344909311}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -145.5, y: -85.5}
-  m_SizeDelta: {x: 100, y: 95}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 494, y: 307}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &203180931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -954,7 +954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &344909311
 RectTransform:
   m_ObjectHideFlags: 0
@@ -966,8 +966,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 203180930}
   - {fileID: 722242842}
+  - {fileID: 203180930}
   m_Father: {fileID: 1614927805}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1124,7 +1124,7 @@ RectTransform:
   - {fileID: 1396724203}
   - {fileID: 1520445574}
   m_Father: {fileID: 344909311}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1200,8 +1200,6 @@ GameObject:
   - component: {fileID: 750937979}
   - component: {fileID: 750937978}
   - component: {fileID: 750937977}
-  - component: {fileID: 750937976}
-  - component: {fileID: 750937975}
   m_Layer: 5
   m_Name: Menu Informasi
   m_TagString: Untagged
@@ -1225,66 +1223,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -145.5, y: -85.5}
-  m_SizeDelta: {x: 100, y: 95}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &750937975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750937973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 750937976}
-          m_TargetAssemblyTypeName: Scale, Assembly-CSharp
-          m_MethodName: scale
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 1
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 750937976}
-          m_TargetAssemblyTypeName: Scale, Assembly-CSharp
-          m_MethodName: scale
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0.8
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &750937976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750937973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: effeae6c274da8c4da0073877da87c0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_AnchoredPosition: {x: -50, y: -160}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &750937977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2335,6 +2276,7 @@ MonoBehaviour:
   correct:
   - {fileID: 8300000, guid: 00e4adacb5ad9e7418877c21abf337b5, type: 3}
   incorrect: {fileID: 8300000, guid: 2a5f5ca37199140468cbc6b3e8364834, type: 3}
+  targetContainer: {fileID: 187847297}
   dropTargets: []
   completed: 0
 --- !u!1 &1767074110

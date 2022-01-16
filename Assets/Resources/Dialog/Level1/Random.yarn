@@ -1,0 +1,47 @@
+title: RandomLiburan
+tags: 
+colorID: 0
+position: -337,-477
+---
+Teman Tarjo: Eh, Tarjo. Udah lama nggak ketemu, Jo. 
+Tarjo: Hehe iya, udah lama banget. Kamu tinggal di sini lagi sekarang?
+Teman Tarjo: Hehe enggak Jo, aku cuma liburan di rumah pamanku. Pengen datang ke Festival Rakyat, makanya aku datang kesini.
+Tarjo: Wah kebetulan aku juga mau kesana. 
+Teman Tarjo: Kalo gitu kita kesana bareng aja. Besok malam, bisa kan?
+Tarjo: Bisa.. besok malam..
+Teman Tarjo: Wah seru banget nih pasti, sampai ketemu besok malam ya Jo..
+Tarjo: Bay bay…
+===
+title: RandomPR
+tags: 
+colorID: 0
+position: -40,-477
+---
+Teman Tarjo: Joo, kamu udah ngerjakan pr matematika belum?
+Tarjo: emang matematika ada pr?
+Teman Tarjo: Ada, yang senin kemarin di kasih.. ada 5 nomor.
+Tarjo: oh iyaa, aduh aku belum. Besok di kumpul ya?
+Teman Tarjo: iya Jo.. Nanti kerjain sama-sama yukk..
+Tarjo: Boleh, nanti pulang sekolah yaa..
+===
+title: RandomTamia
+tags: 
+colorID: 0
+position: -598,-475
+---
+Teman Tarjo: Tarjooo
+Tarjo: iya, kenapa?
+Teman Tarjo: Tamia mu masih ada kan
+<<if $random_tamia is true>>
+    Tarjo: Baru dipinjem sama teman aku yang lain.
+    Teman Tarjo: Yah yaudah deh. Tamia ku tadi malam rusak Jo, padahal aku udah terlanjur daftar balapan.
+<<endif>>
+<<if $random_tamia is false>>
+    Tarjo: Ada..
+    Teman Tarjo: Aku pinjam boleh nggak Jo? Nanti malam mau ikut balapan di taman sari. 
+    Tarjo: Loh, Tamia mu kemana?
+    Teman Tarjo: Tamia ku tadi malam rusak Jo, padahal aku udah terlanjur daftar balapan. Pinjam tamia mu ya?
+    Tarjo: Iyadeh, tapi aku ikut yaa.
+    <<set $random_tamia to true>>
+<<endif>>
+===

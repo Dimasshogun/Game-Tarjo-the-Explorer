@@ -1,0 +1,41 @@
+fileFormatVersion: 2
+guid: 91df2c8c2a97b4a96afb09b3e5bc82b9
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Random-RandomLiburan-0
+  - Random-RandomLiburan-1
+  - Random-RandomLiburan-2
+  - Random-RandomLiburan-3
+  - Random-RandomLiburan-4
+  - Random-RandomLiburan-5
+  - Random-RandomLiburan-6
+  - Random-RandomLiburan-7
+  - Random-RandomPR-8
+  - Random-RandomPR-9
+  - Random-RandomPR-10
+  - Random-RandomPR-11
+  - Random-RandomPR-12
+  - Random-RandomPR-13
+  - Random-RandomTamia-14
+  - Random-RandomTamia-15
+  - Random-RandomTamia-16
+  - Random-RandomTamia-17
+  - Random-RandomTamia-18
+  - Random-RandomTamia-19
+  - Random-RandomTamia-20
+  - Random-RandomTamia-21
+  - Random-RandomTamia-22
+  - Random-RandomTamia-23
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

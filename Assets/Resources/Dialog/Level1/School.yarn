@@ -5,12 +5,41 @@ position: 19,-444
 ---
 <<if questStage("SchoolQuest", 0)>>
     Tarjo : Akhirnya sampai juga disekolah ini
+    <<if isQuestComplete("PulpenQuest") is false>>
+        Tarjo: Kayaknya aku lupa beli pulpen. 
+        Tarjo: Tadi aku lewatin warung yang buka.
+        Tarjo: Harus buru buru ke situ deh, mumpung belum bel masuk.
+        <<stop>>
+    <<endif>>
+    <<if isQuestComplete("AliaQuest") is false>>
+        Tarjo: Kayaknya tadi aku liat Alia di jalan. 
+        Tarjo: kok dia belum sampai ya? 
+        Tarjo: Kayaknya aku harus balik liat dia deh.
+        <<stop>>
+    <<endif>>
 <<advanceQuestStage SchoolQuest 1>>
 <<endif>>
 
 <<if questStage("SchoolQuest", 1)>>
     Tarjo : yok saatnya masuk ke kelas
-    Ari : Ayok jo
+    <<playTransition FadeToBlack>>
+    Tarjo : Gitu deh...
+    Nanda : Tapi bisa dipake uangnya, Al?
+    Alia : Bisa... hehe
+    Ari : Coba ceritain Al, kenapa bisa sobek?
+    Alia : Jadi tadi pagi itu...
+    
+    KRINGG KRIIIINGGG
+    
+    Ari : Yaah, Bel masuk. 
+    Alia : Yahh, baru mau mulai ceritaa
+    Tarjo : Tunda dulu aja Al, hahhaa
+    Nanda : Ayo kita masuk, ini pelajaran Miss Keriting, kalo telat nanti dihukum.
+    Semua : Yooook
+    
+    Bersambung...
+    Terima kasih telah bermain
+    <<resetTransition>>
     <<startMinigame Minigames6>>
 <<endif>>
 ===

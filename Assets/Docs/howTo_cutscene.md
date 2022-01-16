@@ -30,6 +30,8 @@ Object-object yang ada di dalam cutscene ada dua jenis, `Virtual Camera` dan `Mo
 
   Setup untuk `Move Target` tidak terlalu banyak, hanya pengaturan `transform.position` dan nama game object, karena akan dipanggil didalam command `moveCharacter` berdasarkan nama game objectnya.
 
+  Objek karakter, misalnya NPC, juga bisa dijadikan MoveTarget. Jika karakter dipilih sebagai target dalam command `moveCharacter` maka akan mencari objek `TalkSpot`, jika ada karakter akan dipindahkan ke titik tersebut, jika tidak ada karakter akan dipindahkan ke posisi karakter target.
+
 ## Cutscene Trigger
 
 Cutscene trigger cara kerja nya mirip dengan quest trigger, saat player masuk kedalam area nya maka cutscene akan dijalankan.

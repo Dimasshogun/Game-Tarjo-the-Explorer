@@ -35,7 +35,10 @@ namespace Code.Scripts.Character.Player
         {
             if (_targetNpc != null && dialogueRunner.NodeExists(_targetNpc.entryNode))
             {
-                interactButton.gameObject.SetActive(true);
+                if (interactButton != null)
+                {
+                    interactButton.gameObject.SetActive(true);
+                }
             }
             else
             {
@@ -45,13 +48,20 @@ namespace Code.Scripts.Character.Player
         
         private void OnDisable()
         {
-            interactButton.gameObject.SetActive(false);
+            if (interactButton != null)
+            {
+                interactButton.gameObject.SetActive(false);
+            }
         }
 
         private IEnumerator StartDialog()
         {
             if (!_onDialogue)
             {
+                if (_targetNpc.talkSpot != null)
+                {
+                    transform.position = _targetNpc.talkSpot.position;
+                }
                 dialogueRunner.StartDialogue(_targetNpc.entryNode);
                 ToggleOnDialogue(true);
             }
@@ -73,6 +83,7 @@ namespace Code.Scripts.Character.Player
 
             if (onDialogue)
             {
+                _targetNpc.questMarker.SetActive(false);
                 var targetNpcCam = _targetNpc.gameObject.GetComponentInChildren<CameraInstance>();
                 StartCoroutine(CameraManager.Instance.SwitchVirtualCam(targetNpcCam));
             }

@@ -32,6 +32,7 @@ namespace Code.Scripts.Minigame
         public AudioClip[] correct;
         public AudioClip incorrect;
 
+        public GameObject targetContainer;
         public List<MinigameDropTarget> dropTargets = new List<MinigameDropTarget>();
 
         public bool completed;
@@ -51,7 +52,9 @@ namespace Code.Scripts.Minigame
 
             if (dropTargets.Count == 0)
             {
-                dropTargets.AddRange(FindObjectsOfType<MinigameDropTarget>());
+                dropTargets.AddRange(targetContainer == null
+                    ? FindObjectsOfType<MinigameDropTarget>()
+                    : targetContainer.GetComponentsInChildren<MinigameDropTarget>());
             }
             if (dropTargets.Count == 0)
             {
@@ -59,6 +62,7 @@ namespace Code.Scripts.Minigame
                 return; 
             }
             endScreen.SetActive(false);
+            CheckComplete();
         }
 
         public void PlayCorrect()
